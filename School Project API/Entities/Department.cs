@@ -9,8 +9,13 @@ namespace School_Project_API.Entities
 
         public string Name { get; set; }
 
-        [JsonIgnore]
-        public ICollection<Student> Students { get; set; } = new List<Student>();
+
+
+        public ICollection<Teacher> Teachers { get; set; } =new List<Teacher>();     
+
+
+
+       public ICollection<Student> Students { get; set; } =new List<Student>();   
 
 
     }

@@ -18,6 +18,9 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
         builder.HasKey(S => S.Id);
 
 
+        builder.Property(s => s.Id)
+            .ValueGeneratedOnAdd();
+
         builder.Property(S => S.FirstName)
             .IsRequired()
             .HasMaxLength(250);
@@ -26,24 +29,69 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
             .IsRequired()
             .HasMaxLength(250);
 
+        builder.Property(S => S.DateOfBirth)
+            .IsRequired();
+
+        builder.Property(S => S.Gender)
+           .IsRequired()
+           .HasMaxLength(250);
+
+        builder.Property(S => S.Address)
+           .IsRequired()
+           .HasMaxLength(250);
+
+
+        builder.Property(S => S.Email)
+          .IsRequired()
+          .HasMaxLength(250);
+
+        builder.Property(S => S.Phone)
+          .IsRequired()
+          .HasMaxLength(250);
+
+
+        // ── 1:1 ──────────────────────────────────────────────
+        // One Student → One AccessCard
+        // HasOne/WithOne: both sides have exactly one of the other
+        // HasForeignKey<Student>: tells EF which side holds the FK
+        // ─────────────────────────────────────────────────────
+
         builder.HasOne(s => s.AccessCard)
-            .WithOne(s => s.Student)
-            .HasForeignKey<Student>(x => x.CardId);
+            .WithOne(a => a.Student)
+            .HasForeignKey<Student>(s => s.CardId);
 
 
 
-        builder.HasOne(x => x.Department)
-            .WithMany(x => x.Students)
-            .HasForeignKey(x => x.DepID);
+        //One to Many 
+
+        builder.HasOne(d => d.Department)
+    .WithMany(s => s.Students)
+    .HasForeignKey(r => r.DepartmentId);
+
+        /*
+        
+         Many to Many 
+        */
+
+        builder.HasMany(s => s.Subjects)
+
+            .WithMany(s => s.Student)
+            .UsingEntity<StudentSubjects>(
+
+              // Configure the Subject side of the bridge table
+
+              j => j.HasOne(ss => ss.Subject)
+            .WithMany()
+            .HasForeignKey(ss => ss.SubjectId),
+
+            j => j.HasOne(ss => ss.Student)
+           .WithMany()
+           .HasForeignKey(ss => ss.StudentId)
+
+          
 
 
-
-        //builder.HasMany(j => j.Subjects)
-        //         .WithMany(x => x.Students)
-        //          .UsingEntity<StudentSubjects>();
-
-
-
+            );
 
         //builder.Property(S => S.DateOfBirth);
 

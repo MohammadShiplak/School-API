@@ -5176,11 +5176,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\School API\\School Project API\\School Project API.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\School Project API.csproj",
       "projectName": "School Project API",
-      "projectPath": "C:\\Users\\user\\Desktop\\School API\\School Project API\\School Project API.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\School Project API.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\School API\\School Project API\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5259,7 +5259,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.420/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

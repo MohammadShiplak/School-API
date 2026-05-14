@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Azure.Identity;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using School_Project_API.DTO;
 using School_Project_API.Entities;
+using School_Project_API.helper;
+using School_Project_API.Services;
+using School_Project_API.Services.Interfaces;
 
 namespace School_Project_API.Controllers
 {
@@ -11,64 +15,49 @@ namespace School_Project_API.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
+        private readonly IStudentService _studentService;
 
-        private readonly ApplicationDbContext _Context;
 
-        public StudentController(ApplicationDbContext context)
+
+
+
+
+
+
+        public StudentController(IStudentService studentService)
         {
-            _Context = context;
+           _studentService = studentService;    
         }
 
 
+       
+        [HttpGet("{id}", Name = "GetStudentsInfoByID")]
 
-        [HttpGet("{Id}", Name = "GetStudentsInfoByID")]
-
-        public async Task<ActionResult<Student>> GetStudentsInfoByID(int Id)
+        public async Task<ActionResult<StudentDTO>> GetStudentsByID(int id)
         {
 
+            if (id < 0)
+                return BadRequest($"Id '{id}' is not valid. Id must be a positive number");
 
-            if (Id < 0)
-                return BadRequest($"Students with {Id} is not Valid ");
+                    var student =await _studentService.GetStudentByIdAsync(id);
+            if (student == null)
+                return NotFound($"Student with Id {id} was not found");
 
-            var Student = await _Context.Students.Include(s => s.AccessCard).
-                FirstOrDefaultAsync(s => s.Id == Id);
+            return Ok(student);
 
 
-
-            if (Student != null)
-                return Ok(Student);
-            else
-                return NotFound($"Students with {Id} is not  Found");
 
 
         }
 
         [HttpGet]
-        public async Task<ActionResult<Student>> GetAllStudents()
+        public async Task<ActionResult<PagedResponse<StudentDTO>>> GetAllStudents(int pageNumber=1,int pageSize=10)
         {
-            var Students = await _Context.Students
-    .Include(d => d.AccessCard)
-     // Corrected .Include() syntax
-    .Select(d => new Student
-    {
-        Id = d.Id,
-        FirstName = d.FirstName,
-        LastName = d.LastName,
-        DateOfBirth = d.DateOfBirth,
-        CardId = d.CardId,
-        DepID = d.DepID,
-        AccessCard = d.AccessCard,
-        Department = d.Department
+          
+var students =await _studentService.GetAllStudentsAsync(pageNumber,pageSize);
+            return Ok(students);
 
-
-    })
-
-
-    .ToListAsync();
-
-
-
-            return Ok(Students);
+          
         }
 
 
@@ -90,83 +79,36 @@ namespace School_Project_API.Controllers
         public async Task<ActionResult<StudentDTO>> AddStudents(StudentDTO student)
         {
 
-            var Department = await _Context.Departments.FindAsync(student.DepID);
+            var createdStudent=await _studentService.AddStudentAsync(student);
 
-            var Accesscard = await _Context.AccessCards.FindAsync(student.CardID);
+            return CreatedAtAction(nameof(GetStudentsByID),new {id=createdStudent.Id},createdStudent);
 
-
-            if (student == null)
-                return NotFound("Invalid Students Data");
-
-
-            var NewStudent = new Student
-            {
-                CardId = student.CardID,
-                DepID = student.DepID,
-                FirstName = student.FirstName,
-                LastName = student.LastName,
-                DateOfBirth = student.DateOfBirth,
-                Department = Department,
-                AccessCard = Accesscard
-
-
-
-            };
-
-
-            _Context.Students.Add(NewStudent);
-
-            await _Context.SaveChangesAsync();
-
-            return CreatedAtAction("GetStudentsInfoByID", new { Id = student.CardID, }, student);
 
 
         }
 
         [HttpPut]
-        public async Task<ActionResult<List<StudentDTO>>> UpdateStudents(StudentDTO updateStudent)
+        public async Task<ActionResult<StudentDTO>> UpdateStudents(int id,StudentDTO studentDTO)
         {
 
-            if (updateStudent == null)
-                return BadRequest("Student data is null");
+            var updatedstudent = await _studentService.UpdateStudentAsync(id, studentDTO);
 
-            // Assuming DepID is a unique identifier for a student
-            var student = await _Context.Students.FindAsync(updateStudent.Id);
+if (updatedstudent == null)
+                return NotFound($"Student with Id {id} was not found");
 
-            if (student == null)
-                return NotFound("Student not found");
-
-            student.CardId = updateStudent.CardID;
-            student.DepID = updateStudent.DepID;
-            student.FirstName = updateStudent.FirstName;
-            student.LastName = updateStudent.LastName;
-            student.DateOfBirth = updateStudent.DateOfBirth;
-
-            // Save changes and get the updated student
-            await _Context.SaveChangesAsync();
-
-  
-
-            // Return the updated student DTO, maybe with additional transformations
-            return Ok(student);
-
+return Ok(updatedstudent);
         }
 
         [HttpDelete("{Id}")]
-        public async Task<ActionResult<Student>> DeleteStudent(int Id)
+        public async Task<IActionResult> DeleteStudent(int Id)
         {
+            var deleted =await _studentService.DeleteStudentAsync(Id);
+
+            if (!deleted)
+                return NotFound($"Student with Id {Id} was not found");
 
 
-             var StudentID = await _Context.Students.FindAsync(Id);
-
-            if (StudentID == null)
-                return NotFound($"Student with {Id}  not Found ");
-
-            
-             _Context.Students.Remove(StudentID);
-
-
-           return Ok( await _Context.SaveChangesAsync());  
+            return Ok($"Student with Id {Id} deleted successfully");
         }
 
     }

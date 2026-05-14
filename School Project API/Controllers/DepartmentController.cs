@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using School_Project_API.Data.Config;
 using School_Project_API.DTO;
 using School_Project_API.Entities;
+using School_Project_API.Services;
+using School_Project_API.Services.Interfaces;
 using System.Runtime.InteropServices;
 
 namespace School_Project_API.Controllers
@@ -13,52 +15,43 @@ namespace School_Project_API.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+     
+        private readonly IDepartmentService _departmentService;
 
-
-        public DepartmentController(ApplicationDbContext Context)
+        public DepartmentController(IDepartmentService departmentService)
         {
-            _context = Context;
+         _departmentService = departmentService;    
         }
 
 
         [HttpGet("{Id}", Name = "GetDepratmentsInfoByID")]
 
-        public async Task<ActionResult<Department>> GetDepratmentsInfoByID(int? Id)
+        public async Task<ActionResult<DepartmentDTO>> GetDepratmentsInfoByID(int? Id)
         {
 
 
             if (Id < 0)
                 return BadRequest($"Departments with {Id} is not Valid ");
 
-            var Department = await _context.Departments.FindAsync(Id);
+            var Department = await _departmentService.GetDepartmentByIdAsync(Id);
 
 
-            if (Department != null)
-                return Ok(Department);
-            else
+            if (Department == null)
                 return NotFound($"Deprtmnets with {Id} is not  Found");
 
+
+            return Ok(Department);
 
         }
 
         [HttpGet]
-
-        public async Task<ActionResult<Department>> GetAllDepartments()
+        public async Task<ActionResult<IEnumerable<DepartmentDTO>>> GetAllDepartments()
         {
 
-
-            var departments = await _context.Departments
-    .Select(d => new Department
-    {
-        Id = d.Id,
-        Name = d.Name,
-
-    })
-    .ToListAsync();
-
-
+            var departments = await _departmentService.GetAllDepartmentsAsync();
             return Ok(departments);
+
+
         }
 
 
@@ -66,77 +59,45 @@ namespace School_Project_API.Controllers
 
         [HttpPost]
 
-        public async Task<ActionResult<Department>> AddDepratments(DepartmentDTO newDepartment)
+        public async Task<ActionResult<DepartmentDTO>> AddDepartments(DepartmentDTO newDepartment)
         {
 
-            if (newDepartment == null)
-            {
-                return BadRequest("Department data is invalid.");
-            }
-
-            // Map DTO to entity (if needed)
-            var department = new Department
-            {
-                Name = newDepartment.Name
-                // Add other properties if needed
-            };
-
-            // Add the department entity to the context
-            _context.Departments.Add(department);
-
-            // Save changes to the database
-            await _context.SaveChangesAsync();
+           var department=await _departmentService.AddDepartmentAsync(newDepartment);
 
             // Return the created department
-            return CreatedAtAction("GetDepratmentsInfoByID", new { Id = department.Id }, department);
+            return CreatedAtAction(nameof(GetDepratmentsInfoByID), new { Id = department.Id }, department);
 
         }
 
         [HttpDelete("{Id}")]
 
-        public async Task<ActionResult<Department>> DeleteDepratment(int Id)
+        public async Task<ActionResult<DepartmentDTO>> DeleteDepratment(int Id)
         {
 
-         
 
-                if (Id < 0)
-                    return BadRequest($"Departments with {Id} is not Valid ");
+            var deleted = await _departmentService.DeleteDepartemntAsync(Id); ;
 
-            var Department = await _context.Departments.FindAsync(Id);
-
-
-            if (Department == null)
-                return NotFound($"Departments with {Id} is not found ");
+            if (!deleted)
+                return NotFound($"department with Id {Id} was not found");
 
 
-            _context.Departments.Remove(Department);
-
-
-            return Ok(await _context.SaveChangesAsync());
+            return Ok($"department with Id {Id} deleted successfully");
 
 
         }
 
 
         [HttpPut]
-        public async Task<ActionResult<Department>> UpdateDepratment(DepartmentDTO NewDepartment)
+        public async Task<ActionResult<DepartmentDTO>> UpdateDepratment(int id, DepartmentDTO NewDepartment)
         {
+            var updatedstudent = await _departmentService.UpdateDepartmentAsync(id, NewDepartment);
+
+            if (updatedstudent == null)
+                return NotFound($"Student with Id {id} was not found");
+
+            return Ok(updatedstudent);
 
 
-            var Department =await _context.Departments.FindAsync(NewDepartment.Id);
-
-
-            if (Department == null)
-                return NotFound("Department not found ");
-
-            Department.Id = NewDepartment.Id;
-
-            Department.Name = NewDepartment.Name;
-
-
-          await  _context.SaveChangesAsync();
-
-            return Ok(NewDepartment);
 
         }
 

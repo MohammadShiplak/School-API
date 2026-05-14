@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using School_Project_API.DTO;
 using School_Project_API.Entities;
+using School_Project_API.helper;
+using School_Project_API.Services;
+using School_Project_API.Services.Interfaces;
 using System.Text.Json.Serialization;
 
 namespace School_Project_API.Controllers
@@ -12,96 +15,63 @@ namespace School_Project_API.Controllers
     public class SubjectController : ControllerBase
     {
 
-        private readonly ApplicationDbContext _Context;
+        private readonly ISubjectService _subjectService;
 
 
-        public SubjectController(ApplicationDbContext context)
+        public SubjectController(ISubjectService subjectService)
         {
-            _Context = context; 
+            _subjectService = subjectService;
         }
 
 
-        [HttpGet("{Id}",Name ="GetSubjectsInfoByID")]
+        [HttpGet("{id}",Name ="GetSubjectsInfoByID")]
 
-        public async Task<ActionResult<Subject>> GetSubjectsInfobyID(int Id)
+        public async Task<ActionResult<Subject>> GetSubjectsInfobyID(int id)
         {
+            if (id < 0)
+                return BadRequest($"Id '{id}' is not valid. Id must be a positive number");
 
-            var Subject =await _Context.Subjects.FindAsync(Id);
+            var subject  = await _subjectService.GetSubjectByIdAsync(id);
+            if (subject == null)
+                return NotFound($"subject with Id {id} was not found");
 
+            return Ok(subject);
 
-            if (Subject != null)
-                return Ok(Subject);
-            else
-                return NotFound($"No Subjects with SubjectID {Id}");
 
         }
 
         [HttpPost(Name ="AddSubjects")]
-       public async Task<ActionResult<Subject>>AddSubjects(SubjectDTO NewSubject)
+       public async Task<ActionResult<SubjectDTO>>AddSubjects(SubjectDTO NewSubject)
         {
+            var teacher = await _subjectService.AddSubjectAsync(NewSubject);
 
-
-
-
-            var Subject = new Subject
-            {
-
-                SubjectName = NewSubject.SubjectName,
-                Price = NewSubject.Price
-
-            };
-          
-            
-
-            _Context.Subjects.Add(Subject);
-
-            await _Context.SaveChangesAsync();
-
-            return CreatedAtAction("GetSubjectsInfoByID", new { Id = Subject.Id }, Subject);
+            return CreatedAtAction(nameof(GetSubjectsInfobyID), new { id = teacher.Id }, teacher);
         }
 
-        [HttpDelete("{Id}",Name ="DeleteSubject")]
+        [HttpDelete("{id}",Name ="DeleteSubject")]
 
-        public async Task<ActionResult<Department>> DeleteSubject(int Id)
+        public async Task<ActionResult<SubjectDTO>> DeleteSubject(int id)
         {
 
+            var deleted = await _subjectService.DeleteSubjectAsync(id);
+
+            if (!deleted)
+                return NotFound($"subject with Id {id} was not found");
 
 
-            if (Id < 0)
-                return BadRequest($"Subjects with {Id} is not Valid ");
-
-            var Subject = await _Context.Subjects.FindAsync(Id);
-
-
-            if (Subject == null)
-                return NotFound($"Subjects with {Id} is not found ");
-
-
-            _Context.Subjects.Remove(Subject);
-
-
-            return Ok(await _Context.SaveChangesAsync());
-
-
+            return Ok($"subject with Id {id} deleted successfully");
         }
 
         [HttpGet]
-        public async Task <ActionResult<Subject>>GetAllSubjects()
+
+        public async Task<ActionResult<PagedResponse<SubjectDTO>>> GetAllSubjects(int pageNumber = 1, int pageSize = 10)
         {
 
-            var Subjects =await  _Context.Subjects
-    .Select(x => new Subject
-    {
-        Id = x.Id,
-        SubjectName = x.SubjectName,
-      
-    })
-    .ToListAsync();
+            var students = await _subjectService.GetAllSubjectAsync(pageNumber,pageSize); 
+            return Ok(students);
 
-            return Ok(Subjects);      
 
         }
-
 
 
 

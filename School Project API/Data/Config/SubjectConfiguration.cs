@@ -20,12 +20,50 @@ namespace School_Project_API.Data.Config
             builder.Property(s => s.Price)
                    .HasColumnType("decimal(18,2)"); // 
 
+
+
+            // relationships
+            /*
+             1--M 
+            one course includes many subjects 
+
+
+            */
+
+            builder.HasOne(c => c.Course)
+                .WithMany(s => s.Subject)
+                .HasForeignKey(f => f.CourseId);
+
+            /*
+                         1--M
+ One Teacher teaches many subject
+
+             */
+
+            builder.HasOne(t => t.Teacher)
+                .WithMany(s => s.Subject)
+                .HasForeignKey(f => f.TeacherId);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
 
-    
-    
-    
+
+
+
 
 
 

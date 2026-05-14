@@ -12,9 +12,7 @@ namespace School_Project_API.Entities
         public DateTime ExpirationDate { get; set; }
 
 
-         [JsonIgnore]
-        public Student ?Student { get; set; }
-
+        public Student Student { get; set; }
 
     }
 }

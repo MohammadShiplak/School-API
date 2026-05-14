@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using School_Project_API.DTO;
 using School_Project_API.Entities;
+using School_Project_API.Services;
+using School_Project_API.Services.Interfaces;
 
 namespace School_Project_API.Controllers
 {
@@ -11,97 +13,73 @@ namespace School_Project_API.Controllers
     public class AccessCardController : ControllerBase
     {
 
-        private readonly ApplicationDbContext _Context;
+        private readonly IAccessCardService _accessCardService;
 
-        public AccessCardController(ApplicationDbContext context)
+        public AccessCardController(IAccessCardService accessCardService)
         {
-            _Context = context;
+            _accessCardService = accessCardService;
         }
 
         [HttpPost]
-
-        public async Task<ActionResult<AccessCard>> AddAccessCards(AccessCardDTO NewAccessCard)
+        public async Task<ActionResult<AccessCardDTO>> AddAccessCards(AccessCardDTO NewAccessCard)
         {
+            var InstertedCard = await _accessCardService.AddAccessCardAsync(NewAccessCard);
 
-            var AccessCards = new AccessCard
-            {
-
-                SerialNo = NewAccessCard.SerialNo,
-                ExpirationDate = NewAccessCard.ExpirationDate
-
-
-            };
-
-            _Context.AccessCards.Add(AccessCards);
-
-
-            await _Context.SaveChangesAsync();
-
-         return Ok(AccessCards);
-
+            // Return the created department
+            return CreatedAtAction(nameof(GetAccessCardInfobyId), new { Id = NewAccessCard.Id }, InstertedCard);
         }
 
         [HttpGet]
-        public async Task<ActionResult<AccessCard>> GetAllAccessCards()
+        public async Task<ActionResult<AccessCardDTO>> GetAllAccessCards(int pageNumber=1, int pageSize=10)
         {
+            var cards = await _accessCardService.GetAllCardsAsync(pageNumber,pageSize);
+            return Ok(cards);
 
-            var Accesscadrs = await _Context.AccessCards.Select(A => new
-            AccessCard
-            {
-
-                Id = A.Id,
-                SerialNo = A.SerialNo,
-                ExpirationDate= A.ExpirationDate    
-
-
-            }).ToListAsync(); 
-             
-             return Ok(Accesscadrs);    
         }
 
         [HttpPut]
 
-        public async Task<ActionResult<AccessCard>> UpdateAccessCards(AccessCardDTO UpdatedAcccessCard)
+        public async Task<ActionResult<AccessCardDTO>> UpdateAccessCards(int id,AccessCardDTO UpdatedAcccessCard)
         {
+            var updateCard = await _accessCardService.UpdateAccessAsync(id,UpdatedAcccessCard);
 
-          var AccessCards = await _Context.AccessCards.FindAsync(UpdatedAcccessCard.Id);   
+            if (updateCard == null)
+                return NotFound($"Student with Id {id} was not found");
 
-
-           
-            AccessCards.Id= UpdatedAcccessCard.Id;  
-            AccessCards.SerialNo= UpdatedAcccessCard.SerialNo;  
-            AccessCards.ExpirationDate= UpdatedAcccessCard.ExpirationDate;
-
-
-          await  _Context.SaveChangesAsync();
-
-        return Ok(UpdatedAcccessCard);
+            return Ok(updateCard);
         }
 
 
 
-        [HttpDelete("{Id}")]
-        public async Task<ActionResult<AccessCard>>DeleteAccessCard(int Id)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<AccessCardDTO>>DeleteAccessCard(int id)
         {
-            if (Id < 0)
-                return BadRequest($"AccessCards with {Id} is not Valid ");
+            var deleted = await _accessCardService.DeleteAccessAsync(id);
 
-            var AccessCard = await _Context.AccessCards.FindAsync(Id);
-
-
-            if (AccessCard == null)
-                return NotFound($"AccessCards with {Id} is not found ");
+            if (!deleted)
+                return NotFound($"accessCard with Id {id} was not found");
 
 
-            _Context.AccessCards.Remove(AccessCard);
-
-
-            return Ok(await _Context.SaveChangesAsync());
+            return Ok($"accessCard with Id {id} deleted successfully");
 
 
         }
+        [HttpGet("{id:int}")]
+
+        public async Task<ActionResult<AccessCardDTO>> GetAccessCardInfobyId(int id)
+        {
+            if (id < 0)
+                return BadRequest($"Id '{id}' is not valid. Id must be a positive number");
+
+            var teacher = await _accessCardService.GetAccessCardByIdAsync(id);
+            if (teacher == null)
+                return NotFound($"Teacher with Id {id} was not found");
+
+            return Ok(teacher);
 
 
+
+        }
 
 
 

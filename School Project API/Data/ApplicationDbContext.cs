@@ -14,9 +14,11 @@ public class ApplicationDbContext: DbContext
       
        public DbSet<Department>Departments { get; set; }   
 
-      public DbSet<StudentSubjects>StudentSubjects { get; set; }  
+    public DbSet<Class> Class { get; set; }
 
+    public DbSet<Teacher> Teacher { get; set; }
 
+    public DbSet<Course> Course { get; set; }
        public DbSet<Subject> Subjects { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options) : base(options)
