@@ -1,4 +1,5 @@
 ﻿using Azure.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -13,6 +14,7 @@ namespace School_Project_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class StudentController : ControllerBase
     {
         private readonly IStudentService _studentService;
@@ -76,6 +78,7 @@ var students =await _studentService.GetAllStudentsAsync(pageNumber,pageSize);
 
 
         [HttpPost(Name = "AddStudents")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<StudentDTO>> AddStudents(StudentDTO student)
         {
 
@@ -87,7 +90,8 @@ var students =await _studentService.GetAllStudentsAsync(pageNumber,pageSize);
 
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<StudentDTO>> UpdateStudents(int id,StudentDTO studentDTO)
         {
 
@@ -100,6 +104,7 @@ return Ok(updatedstudent);
         }
 
         [HttpDelete("{Id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteStudent(int Id)
         {
             var deleted =await _studentService.DeleteStudentAsync(Id);

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using School_Project_API.DTO;
 using School_Project_API.helper;
@@ -8,6 +9,7 @@ namespace School_Project_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CourseController : ControllerBase
     {
 
@@ -63,6 +65,7 @@ namespace School_Project_API.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<CourseDTO>> AddCourse(CourseDTO course)
         {
 
@@ -74,7 +77,8 @@ namespace School_Project_API.Controllers
 
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<StudentDTO>> Updatecourses(int id, CourseDTO courseDTO)
         {
 
@@ -87,6 +91,7 @@ namespace School_Project_API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteCourse(int id)
         {
             var deleted = await _courstService.DeleteCourseAsync(id);

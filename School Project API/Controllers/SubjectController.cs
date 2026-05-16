@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using School_Project_API.DTO;
@@ -12,6 +13,7 @@ namespace School_Project_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class SubjectController : ControllerBase
     {
 
@@ -41,7 +43,8 @@ namespace School_Project_API.Controllers
         }
 
         [HttpPost(Name ="AddSubjects")]
-       public async Task<ActionResult<SubjectDTO>>AddSubjects(SubjectDTO NewSubject)
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<SubjectDTO>>AddSubjects(SubjectDTO NewSubject)
         {
             var teacher = await _subjectService.AddSubjectAsync(NewSubject);
 
@@ -49,6 +52,7 @@ namespace School_Project_API.Controllers
         }
 
         [HttpDelete("{id}",Name ="DeleteSubject")]
+        [Authorize(Roles = "Admin")]
 
         public async Task<ActionResult<SubjectDTO>> DeleteSubject(int id)
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ namespace School_Project_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ClassController : ControllerBase
     {
         private readonly IClassService _classService;
@@ -31,6 +33,7 @@ namespace School_Project_API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<ClassDTO>> DeleteClass(int id)
         {
             var deleted = await _classService.DeleteClassAsync(id);
@@ -60,6 +63,7 @@ namespace School_Project_API.Controllers
 
         }
         [HttpPost]
+        [Authorize(Roles ="Admin")]
         public async Task<ActionResult<ClassDTO>> AddClass(ClassDTO newClass)
         {
 
@@ -71,7 +75,7 @@ namespace School_Project_API.Controllers
 
 
         [HttpPut]
-
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<ClassDTO>> UpdateClass(int id, ClassDTO updatedclass)
 
         {

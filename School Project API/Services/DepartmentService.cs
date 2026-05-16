@@ -97,6 +97,9 @@ namespace School_Project_API.Services
 
             var department =await  _context.Departments.FindAsync(id);
 
+            if (department == null)
+                return null;
+
             department.Name=departmentDTO.Name;
 
 

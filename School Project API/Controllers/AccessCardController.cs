@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using School_Project_API.DTO;
@@ -10,6 +11,7 @@ namespace School_Project_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AccessCardController : ControllerBase
     {
 
@@ -21,6 +23,7 @@ namespace School_Project_API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AccessCardDTO>> AddAccessCards(AccessCardDTO NewAccessCard)
         {
             var InstertedCard = await _accessCardService.AddAccessCardAsync(NewAccessCard);
@@ -36,8 +39,8 @@ namespace School_Project_API.Controllers
             return Ok(cards);
 
         }
-
-        [HttpPut]
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
 
         public async Task<ActionResult<AccessCardDTO>> UpdateAccessCards(int id,AccessCardDTO UpdatedAcccessCard)
         {
@@ -52,6 +55,7 @@ namespace School_Project_API.Controllers
 
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AccessCardDTO>>DeleteAccessCard(int id)
         {
             var deleted = await _accessCardService.DeleteAccessAsync(id);

@@ -504,3 +504,5 @@ C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School P.F616D702.Up2Date
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.genruntimeconfig.cache
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\ref\School Project API.dll
+C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\BCrypt-Net-Next.dll
+C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
