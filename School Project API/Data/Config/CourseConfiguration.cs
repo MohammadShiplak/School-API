@@ -33,27 +33,16 @@ namespace School_Project_API.Data.Config
         {
             return new List<Course>
             {
-                new Course
-                {
-                    Id = 1,
-                    Name = "Full Stack Development",
-                    Price = 199.99m,
-                    ImagePath = "/images/fullstack.png"
-                },
-                new Course
-                {
-                    Id = 2,
-                    Name = "Database Design",
-                    Price = 149.50m,
-                    ImagePath = "/images/database.png"
-                },
-                new Course
-                {
-                    Id = 3,
-                    Name = "Cloud Computing Basics",
-                    Price = 99.99m,
-                    ImagePath = "/images/cloud.png"
-                }
+               new Course { Id = 1, Name = "ASP.NET Core", Price = 100, ImagePath = "/images/asp.png" },
+    new Course { Id = 2, Name = "React.js", Price = 120, ImagePath = "/images/react.png" },
+    new Course { Id = 3, Name = "SQL Server", Price = 80, ImagePath = "/images/sql.png" },
+    new Course { Id = 4, Name = "Docker", Price = 90, ImagePath = "/images/docker.png" },
+    new Course { Id = 5, Name = "Azure", Price = 110, ImagePath = "/images/azure.png" },
+    new Course { Id = 6, Name = "Python", Price = 95, ImagePath = "/images/python.png" },
+    new Course { Id = 7, Name = "Cyber Security", Price = 130, ImagePath = "/images/security.png" },
+    new Course { Id = 8, Name = "Machine Learning", Price = 150, ImagePath = "/images/ml.png" },
+    new Course { Id = 9, Name = "Networking", Price = 85, ImagePath = "/images/network.png" },
+    new Course { Id = 10, Name = "Algorithms", Price = 140, ImagePath = "/images/algo.png" }
             };
         }
 

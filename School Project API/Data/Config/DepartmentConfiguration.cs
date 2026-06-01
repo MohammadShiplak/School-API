@@ -30,16 +30,18 @@ namespace School_Project_API.Data.Config
             return new List<Department>()
             {
 
-            //new Department { Id = 1,Name="IT" },
-            //new Department { Id = 2, Name = "HR" },
-            //new Department { Id = 3, Name = "Finance" },
-            //new Department { Id = 4, Name = "Marketing" },
-            //new Department { Id = 5, Name = "Sales" },
-            //new Department { Id = 6, Name = "Operations" },
-            //new Department { Id = 7, Name = "Customer Service" },
-            //new Department { Id = 8, Name = "Research & Development" },
-            //new Department { Id = 9, Name = "Legal" },
-            //new Department { Id = 10, Name = "Logistics" }
+    new Department { Id = 1, Name = "IT" },
+    new Department { Id = 2, Name = "HR" },
+    new Department { Id = 3, Name = "Finance" },
+    new Department { Id = 4, Name = "Marketing" },
+    new Department { Id = 5, Name = "Sales" },
+    new Department { Id = 6, Name = "Operations" },
+    new Department { Id = 7, Name = "Cyber Security" },
+    new Department { Id = 8, Name = "AI" },
+    new Department { Id = 9, Name = "Networking" },
+    new Department { Id = 10, Name = "Business" }
+
+
 
             };
         }

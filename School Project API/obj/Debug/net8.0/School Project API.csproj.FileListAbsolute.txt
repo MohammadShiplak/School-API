@@ -335,17 +335,6 @@ C:\Users\user\Desktop\School API\School Project API\obj\Debug\net8.0\refint\Scho
 C:\Users\user\Desktop\School API\School Project API\obj\Debug\net8.0\School Project API.pdb
 C:\Users\user\Desktop\School API\School Project API\obj\Debug\net8.0\School Project API.genruntimeconfig.cache
 C:\Users\user\Desktop\School API\School Project API\obj\Debug\net8.0\ref\School Project API.dll
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.csproj.AssemblyReference.cache
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.AssemblyInfoInputs.cache
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.AssemblyInfo.cs
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.sourcelink.json
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.dll
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\refint\School Project API.dll
-C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.pdb
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\School Project API.exe
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\appsettings.json
@@ -355,7 +344,9 @@ C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\School Project API.pdb
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\BCrypt-Net-Next.dll
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\Humanizer.dll
+C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -493,6 +484,14 @@ C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.AssemblyInfo.cs
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.sourcelink.json
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\staticwebassets\msbuild.School Project API.Microsoft.AspNetCore.StaticWebAssets.props
@@ -502,7 +501,8 @@ C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\scopedcss\bundle\School Project API.styles.css
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School P.F616D702.Up2Date
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.dll
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\refint\School Project API.dll
+C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.pdb
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.genruntimeconfig.cache
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\ref\School Project API.dll
-C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\BCrypt-Net-Next.dll
-C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

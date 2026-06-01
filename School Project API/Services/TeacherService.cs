@@ -90,8 +90,8 @@ HireDate = teacher.HireDate,
         {
             Id = d.Id,
             Name=d.Name,
-            Specialization=d.Specialization
-            
+            Specialization=d.Specialization,
+            HireDate=d.HireDate,
 
         })
         .ToListAsync();

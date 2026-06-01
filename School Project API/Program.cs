@@ -38,6 +38,33 @@ builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IClassService, ClassService>();
 builder.Services.AddScoped<IAccessCardService, AccessCardService>();
 builder.Services.AddScoped<ICourseService, CourseService>();
+builder.Services.AddScoped<IAttendanceService, AttendanceService>();
+builder.Services.AddScoped<IHomeworkService, HomeworkService>();
+
+// ─── 2. CORS ──────────────────────────────────────────────────
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactPolicy", policy =>
+    {
+        policy
+            .WithOrigins(
+                "http://localhost:5173",    // ← NO trailing slash
+                "https://localhost:5173"    // ← NO trailing slash
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+            
+    });
+});
+
+
+
+
+
+
+
+
+
 
 // ── Step 3: JWT Authentication ────────────────────────────────
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -60,10 +87,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-builder.Services.AddAuthorization(options =>
-{
-    
-});
+
 // ── Step 4: Controllers ───────────────────────────────────────
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -108,6 +132,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("ReactPolicy");
 app.UseAuthentication(); // ← MUST be before UseAuthorization
 app.UseAuthorization();
 app.MapControllers();

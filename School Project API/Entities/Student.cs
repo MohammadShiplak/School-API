@@ -32,8 +32,8 @@ namespace School_Project_API.Entities
 
         */
 
-        public int CardId { get; set; } 
-        public AccessCard AccessCard { get; set; }  
+        public int ?CardId { get; set; } 
+        public AccessCard ?AccessCard { get; set; }  
 
         /*
          One to Many
@@ -41,8 +41,8 @@ namespace School_Project_API.Entities
         */
         
 
-        public Department Department { get; set; }  
-        public int DepartmentId { get; set; }   
+        public Department ?Department { get; set; }  
+        public int ?DepartmentId { get; set; }   
 
         /*
          Many to Many 

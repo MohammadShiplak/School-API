@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace School_Project_API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260524050504_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -514,178 +517,6 @@ namespace School_Project_API.Migrations
                         {
                             Id = 10,
                             Name = "Business"
-                        });
-                });
-
-            modelBuilder.Entity("School_Project_API.Entities.Homework", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("ClassId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
-
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("SubjectId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TeacherId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClassId");
-
-                    b.HasIndex("DueDate");
-
-                    b.HasIndex("SubjectId");
-
-                    b.HasIndex("TeacherId");
-
-                    b.ToTable("Homeworks", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ClassId = 1,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Complete exercises 1 to 15 from the algebra worksheet.",
-                            DueDate = new DateTime(2026, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1,
-                            SubjectId = 1,
-                            TeacherId = 1,
-                            Title = "Math Algebra Practice"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ClassId = 2,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Write a lab report about the plant growth experiment.",
-                            DueDate = new DateTime(2026, 6, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1,
-                            SubjectId = 2,
-                            TeacherId = 1,
-                            Title = "Science Lab Report"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ClassId = 1,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Read chapter 4 and write a one-page summary.",
-                            DueDate = new DateTime(2026, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 2,
-                            SubjectId = 3,
-                            TeacherId = 2,
-                            Title = "English Reading Summary"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ClassId = 3,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Create a timeline of key events from the lesson.",
-                            DueDate = new DateTime(2026, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 2,
-                            SubjectId = 4,
-                            TeacherId = 2,
-                            Title = "History Timeline"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            ClassId = 2,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Label the countries and capitals on the provided map.",
-                            DueDate = new DateTime(2026, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1,
-                            SubjectId = 5,
-                            TeacherId = 3,
-                            Title = "Geography Map Activity"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            ClassId = 4,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Answer the questions about hardware and software.",
-                            DueDate = new DateTime(2026, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1,
-                            SubjectId = 6,
-                            TeacherId = 3,
-                            Title = "Computer Basics Assignment"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            ClassId = 3,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Complete the grammar exercises from page 32.",
-                            DueDate = new DateTime(2026, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 2,
-                            SubjectId = 7,
-                            TeacherId = 4,
-                            Title = "Arabic Grammar Practice"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            ClassId = 4,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Draw a still-life sketch using pencil shading.",
-                            DueDate = new DateTime(2026, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1,
-                            SubjectId = 8,
-                            TeacherId = 4,
-                            Title = "Art Sketch Assignment"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            ClassId = 5,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Write a short reflection about teamwork in sports.",
-                            DueDate = new DateTime(2026, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1,
-                            SubjectId = 9,
-                            TeacherId = 5,
-                            Title = "Physical Education Reflection"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            ClassId = 5,
-                            CreatedAt = new DateTime(2026, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Complete the revision worksheet before next class.",
-                            DueDate = new DateTime(2026, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 1,
-                            SubjectId = 10,
-                            TeacherId = 5,
-                            Title = "Final Revision Worksheet"
                         });
                 });
 
@@ -1229,31 +1060,6 @@ namespace School_Project_API.Migrations
                         .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Teacher");
-                });
-
-            modelBuilder.Entity("School_Project_API.Entities.Homework", b =>
-                {
-                    b.HasOne("School_Project_API.Entities.Class", "Class")
-                        .WithMany()
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.NoAction);
-
-                    b.HasOne("School_Project_API.Entities.Subject", "Subject")
-                        .WithMany()
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.NoAction);
-
-                    b.HasOne("School_Project_API.Entities.Teacher", "Teacher")
-                        .WithMany()
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Class");
-
-                    b.Navigation("Subject");
 
                     b.Navigation("Teacher");
                 });
