@@ -3,6 +3,41 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\data\\config\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:data\\config\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\school project api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:school project api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Downloads\\UserConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\controllers\\homeworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:controllers\\homeworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -12,10 +47,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Downloads\\HomeworkService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\data\\config\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:data\\config\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\dto\\homeworkdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -36,10 +67,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\data\\config\\homeworkconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -148,10 +175,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260524042957_initial creation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260524041642_Add Attendance table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260524041642_Add Attendance table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -192,20 +215,12 @@
       "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\controllers\\accesscardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -218,10 +233,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -314,10 +325,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Downloads\\Student_3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\school project api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:school project api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\services\\interfaces\\iteacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -417,6 +424,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\migrations\\20260601000721_add homework controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:migrations\\20260601000721_add homework controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|c:\\users\\user\\desktop\\school api\\school-api\\school project api\\migrations\\20260602020857_addprofileimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55A6D63E-6DBC-4DC0-8004-6EEADF58B015}|School Project API.csproj|solutionrelative:migrations\\20260602020857_addprofileimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -426,7 +437,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -454,46 +465,128 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeworkDTO.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\HomeworkDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\HomeworkDTO.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\HomeworkDTO.cs",
-              "RelativeToolTip": "DTO\\HomeworkDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\RegisterDTO.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\RegisterDTO.cs",
+              "RelativeToolTip": "DTO\\RegisterDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:00:37.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeworkService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Downloads\\HomeworkService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\HomeworkService.cs",
-              "ToolTip": "C:\\Users\\user\\Downloads\\HomeworkService.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\HomeworkService.cs",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAAAOkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:13:37.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T13:30:39.782Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAiwCAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T01:43:24.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "School Project API.csproj",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\School Project API.csproj",
+              "RelativeDocumentMoniker": "School Project API.csproj",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\School Project API.csproj",
+              "RelativeToolTip": "School Project API.csproj",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-21T14:11:41.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Entities\\User.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\User.cs",
+              "RelativeToolTip": "Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T21:59:55.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T02:06:11.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 112,
+              "Title": "20260602020857_AddProfileImage.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260602020857_AddProfileImage.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260602020857_AddProfileImage.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260602020857_AddProfileImage.cs",
+              "RelativeToolTip": "Migrations\\20260602020857_AddProfileImage.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T02:08:58.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T01:51:50.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAApwIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T11:51:28.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\UserConfiguration.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\UserConfiguration.cs",
               "RelativeToolTip": "Data\\Config\\UserConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwDcAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T22:52:24.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T22:52:24.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
+              "Title": "HomeworkController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\HomeworkController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeworkController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\HomeworkController.cs",
+              "RelativeToolTip": "Controllers\\HomeworkController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAqwG4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:47:05.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\DepartmentController.cs",
               "RelativeDocumentMoniker": "Controllers\\DepartmentController.cs",
@@ -505,7 +598,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
+              "Title": "HomeworkService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Downloads\\HomeworkService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\HomeworkService.cs",
+              "ToolTip": "C:\\Users\\user\\Downloads\\HomeworkService.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\HomeworkService.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAAAOkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:13:37.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeworkDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\HomeworkDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\HomeworkDTO.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\HomeworkDTO.cs",
+              "RelativeToolTip": "DTO\\HomeworkDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:00:37.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
@@ -517,7 +634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "AttendanceController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\AttendanceController.cs",
               "RelativeDocumentMoniker": "Controllers\\AttendanceController.cs",
@@ -529,7 +646,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "HomeworkService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\HomeworkService.cs",
               "RelativeDocumentMoniker": "Services\\HomeworkService.cs",
@@ -537,12 +654,11 @@
               "RelativeToolTip": "Services\\HomeworkService.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T02:28:21.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T02:28:21.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
@@ -550,37 +666,11 @@
               "RelativeToolTip": "Controllers\\StudentController.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAgwFAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T22:34:07.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T22:34:07.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeworkController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\HomeworkController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeworkController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\HomeworkController.cs",
-              "RelativeToolTip": "Controllers\\HomeworkController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAqwG4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T23:47:05.581Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T11:51:28.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "IHomeworkService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\IHomeworkService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\IHomeworkService.cs",
@@ -592,7 +682,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "HomeworkController_1.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\HomeworkController_1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\HomeworkController_1.cs",
@@ -604,7 +694,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "HomeworkConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\HomeworkConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\HomeworkConfiguration.cs",
@@ -616,7 +706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "IHomeworkService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\IHomeworkService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IHomeworkService.cs",
@@ -628,7 +718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "20260531235714_Implement HomworkController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260531235714_Implement HomworkController.cs",
               "RelativeDocumentMoniker": "Migrations\\20260531235714_Implement HomworkController.cs",
@@ -640,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -652,7 +742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 111,
               "Title": "20260601000721_Add Homework Controller.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260601000721_Add Homework Controller.cs",
               "RelativeDocumentMoniker": "Migrations\\20260601000721_Add Homework Controller.cs",
@@ -664,7 +754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "20260524050504_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260524050504_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20260524050504_InitialCreate.cs",
@@ -676,7 +766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "IHomeworkService_2.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\IHomeworkService_2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\IHomeworkService_2.cs",
@@ -688,7 +778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "CourseConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\CourseConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\CourseConfiguration.cs",
@@ -700,7 +790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "IHomeworkService_1.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\IHomeworkService_1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\IHomeworkService_1.cs",
@@ -712,7 +802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "HomeworkDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\HomeworkDTO.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\HomeworkDTO.cs",
@@ -724,7 +814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "HomeworkConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\HomeworkConfiguration.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\HomeworkConfiguration.cs",
@@ -736,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "TeacherConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\TeacherConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\TeacherConfiguration.cs",
@@ -748,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "AccessCardDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\AccessCardDTO.cs",
               "RelativeDocumentMoniker": "DTO\\AccessCardDTO.cs",
@@ -760,7 +850,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "AttendanceDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\AttendanceDTO.cs",
               "RelativeDocumentMoniker": "DTO\\AttendanceDTO.cs",
@@ -772,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "StudentService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\StudentService.cs",
               "RelativeDocumentMoniker": "Services\\StudentService.cs",
@@ -784,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "Attendance.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\Attendance.cs",
               "RelativeDocumentMoniker": "Entities\\Attendance.cs",
@@ -796,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "AttendanceService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\AttendanceService.cs",
               "RelativeDocumentMoniker": "Services\\AttendanceService.cs",
@@ -808,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "AttendanceConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\AttendanceConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\AttendanceConfiguration.cs",
@@ -820,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "SubjectConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\SubjectConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\SubjectConfiguration.cs",
@@ -832,7 +922,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "DepartmentConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\DepartmentConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\DepartmentConfiguration.cs",
@@ -844,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "ClassConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\ClassConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\ClassConfiguration.cs",
@@ -856,7 +946,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "StudentConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\StudentConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\StudentConfiguration.cs",
@@ -868,7 +958,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "StudentSubjectConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\StudentSubjectConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\StudentSubjectConfiguration.cs",
@@ -880,7 +970,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "AccessCardConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Data\\Config\\AccessCardConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Config\\AccessCardConfiguration.cs",
@@ -892,7 +982,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "20260524043912_Initial.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260524043912_Initial.cs",
               "RelativeDocumentMoniker": "Migrations\\20260524043912_Initial.cs",
@@ -904,7 +994,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "20260524043247_add null.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260524043247_add null.cs",
               "RelativeDocumentMoniker": "Migrations\\20260524043247_add null.cs",
@@ -916,7 +1006,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "20260524042957_initial creation.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260524042957_initial creation.cs",
               "RelativeDocumentMoniker": "Migrations\\20260524042957_initial creation.cs",
@@ -928,19 +1018,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Entities\\User.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\User.cs",
-              "RelativeToolTip": "Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T21:59:55.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 45,
               "Title": "20260524041642_Add Attendance table.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260524041642_Add Attendance table.cs",
               "RelativeDocumentMoniker": "Migrations\\20260524041642_Add Attendance table.cs",
@@ -952,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 46,
               "Title": "20260524040322_Add Attendance.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260524040322_Add Attendance.cs",
               "RelativeDocumentMoniker": "Migrations\\20260524040322_Add Attendance.cs",
@@ -964,7 +1042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 47,
               "Title": "CourseService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\CourseService.cs",
               "RelativeDocumentMoniker": "Services\\CourseService.cs",
@@ -976,7 +1054,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 48,
               "Title": "IAttendanceService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\IAttendanceService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAttendanceService.cs",
@@ -988,7 +1066,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 49,
               "Title": "ICourseService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\ICourseService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICourseService.cs",
@@ -1000,7 +1078,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "AccessCardController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\AccessCardController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccessCardController.cs",
@@ -1012,7 +1090,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 50,
               "Title": "TeacherService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\TeacherService.cs",
               "RelativeDocumentMoniker": "Services\\TeacherService.cs",
@@ -1024,7 +1102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "ClassController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\ClassController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClassController.cs",
@@ -1036,19 +1114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\AuthService.cs",
-              "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T01:43:24.519Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 52,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\Student.cs",
               "RelativeDocumentMoniker": "Entities\\Student.cs",
@@ -1060,7 +1126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 51,
               "Title": "Teacher.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\Teacher.cs",
               "RelativeDocumentMoniker": "Entities\\Teacher.cs",
@@ -1072,19 +1138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T01:51:50.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 55,
               "Title": "TeacherController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\TeacherController.cs",
               "RelativeDocumentMoniker": "Controllers\\TeacherController.cs",
@@ -1096,7 +1150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 53,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -1108,7 +1162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 54,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -1120,7 +1174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 56,
               "Title": "SubjectController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Controllers\\SubjectController.cs",
               "RelativeDocumentMoniker": "Controllers\\SubjectController.cs",
@@ -1132,19 +1186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\RegisterDTO.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\RegisterDTO.cs",
-              "RelativeToolTip": "DTO\\RegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:30:39.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAuthService.cs",
@@ -1156,7 +1198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\LoginDTO.cs",
               "RelativeDocumentMoniker": "DTO\\LoginDTO.cs",
@@ -1168,7 +1210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "DepartmentService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\DepartmentService.cs",
               "RelativeDocumentMoniker": "Services\\DepartmentService.cs",
@@ -1180,7 +1222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "IDepartmentService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\IDepartmentService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IDepartmentService.cs",
@@ -1192,7 +1234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "IClassService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\IClassService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IClassService.cs",
@@ -1204,7 +1246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 68,
               "Title": "PagedResponse.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\helper\\PagedResponse.cs",
               "RelativeDocumentMoniker": "helper\\PagedResponse.cs",
@@ -1216,7 +1258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "SubjectService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\SubjectService.cs",
               "RelativeDocumentMoniker": "Services\\SubjectService.cs",
@@ -1228,7 +1270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "AccessCardService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\AccessCardService.cs",
               "RelativeDocumentMoniker": "Services\\AccessCardService.cs",
@@ -1240,7 +1282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 67,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\Course.cs",
               "RelativeDocumentMoniker": "Entities\\Course.cs",
@@ -1252,7 +1294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 66,
               "Title": "ClassService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\ClassService.cs",
               "RelativeDocumentMoniker": "Services\\ClassService.cs",
@@ -1264,7 +1306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 69,
               "Title": "StudentSubjects.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\StudentSubjects.cs",
               "RelativeDocumentMoniker": "Entities\\StudentSubjects.cs",
@@ -1276,7 +1318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 70,
               "Title": "Subject.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\Subject.cs",
               "RelativeDocumentMoniker": "Entities\\Subject.cs",
@@ -1288,7 +1330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "20260512160426_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260512160426_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20260512160426_InitialCreate.cs",
@@ -1299,7 +1341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "20260512155749_Add relationships between entities.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260512155749_Add relationships between entities.cs",
               "RelativeDocumentMoniker": "Migrations\\20260512155749_Add relationships between entities.cs",
@@ -1310,7 +1352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "StudentSubjectsConfiguration_1.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\StudentSubjectsConfiguration_1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\StudentSubjectsConfiguration_1.cs",
@@ -1322,7 +1364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "StudentSubjectsConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\StudentSubjectsConfiguration.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\StudentSubjectsConfiguration.cs",
@@ -1334,7 +1376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "StudentSubjects_3.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\StudentSubjects_3.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\StudentSubjects_3.cs",
@@ -1346,7 +1388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "StudentConfiguration_3.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\StudentConfiguration_3.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\StudentConfiguration_3.cs",
@@ -1358,7 +1400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "Class.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\Class.cs",
               "RelativeDocumentMoniker": "Entities\\Class.cs",
@@ -1370,7 +1412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 79,
               "Title": "Department.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\Department.cs",
               "RelativeDocumentMoniker": "Entities\\Department.cs",
@@ -1382,7 +1424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 82,
               "Title": "AccessCard.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Entities\\AccessCard.cs",
               "RelativeDocumentMoniker": "Entities\\AccessCard.cs",
@@ -1394,7 +1436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 80,
               "Title": "Department.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\Department.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\Department.cs",
@@ -1406,7 +1448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "TeacherConfiguration_1.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\TeacherConfiguration_1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\TeacherConfiguration_1.cs",
@@ -1418,7 +1460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 81,
               "Title": "20260512030104_Many to Many relationships.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20260512030104_Many to Many relationships.cs",
               "RelativeDocumentMoniker": "Migrations\\20260512030104_Many to Many relationships.cs",
@@ -1429,7 +1471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 84,
               "Title": "Student_3.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\Student_3.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\Student_3.cs",
@@ -1441,7 +1483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 83,
               "Title": "Teacher.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\Teacher.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\Teacher.cs",
@@ -1453,19 +1495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
-              "Title": "School Project API.csproj",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\School Project API.csproj",
-              "RelativeDocumentMoniker": "School Project API.csproj",
-              "ToolTip": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\School Project API.csproj",
-              "RelativeToolTip": "School Project API.csproj",
-              "ViewState": "AgIAAAEAAAAAAAAAAABhwAkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-21T14:11:41.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 85,
               "Title": "ITeacherService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\ITeacherService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ITeacherService.cs",
@@ -1477,7 +1507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 86,
               "Title": "TeacherDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\TeacherDTO.cs",
               "RelativeDocumentMoniker": "DTO\\TeacherDTO.cs",
@@ -1489,7 +1519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 87,
               "Title": "CourseDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\CourseDTO.cs",
               "RelativeDocumentMoniker": "DTO\\CourseDTO.cs",
@@ -1501,7 +1531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 88,
               "Title": "ClassDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\ClassDTO.cs",
               "RelativeDocumentMoniker": "DTO\\ClassDTO.cs",
@@ -1513,7 +1543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 89,
               "Title": "IStudentService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\IStudentService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IStudentService.cs",
@@ -1525,7 +1555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 90,
               "Title": "IAccessCardService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\IAccessCardService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAccessCardService.cs",
@@ -1537,7 +1567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 91,
               "Title": "ISubjectService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Services\\Interfaces\\ISubjectService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ISubjectService.cs",
@@ -1549,7 +1579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 95,
               "Title": "PaginationResult.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\PaginationResult.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\PaginationResult.cs",
@@ -1561,7 +1591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 94,
               "Title": "PaginationParams.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\PaginationParams.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\PaginationParams.cs",
@@ -1573,7 +1603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 93,
               "Title": "StudentService_paginated.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\StudentService_paginated.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\StudentService_paginated.cs",
@@ -1585,7 +1615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 92,
               "Title": "IStudentService_paginated.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\IStudentService_paginated.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\IStudentService_paginated.cs",
@@ -1597,7 +1627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 96,
               "Title": "DepartmentDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\DepartmentDTO.cs",
               "RelativeDocumentMoniker": "DTO\\DepartmentDTO.cs",
@@ -1609,7 +1639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 97,
               "Title": "StudentDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\StudentDTO.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\StudentDTO.cs",
@@ -1621,7 +1651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 100,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\StudentController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\StudentController.cs",
@@ -1633,7 +1663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 98,
               "Title": "StudentService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\StudentService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\StudentService.cs",
@@ -1645,7 +1675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 99,
               "Title": "IStudentService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Downloads\\IStudentService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\IStudentService.cs",
@@ -1657,7 +1687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 101,
               "Title": "SubjectDTO.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\DTO\\SubjectDTO.cs",
               "RelativeDocumentMoniker": "DTO\\SubjectDTO.cs",
@@ -1669,7 +1699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 103,
               "Title": "20250903233758_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20250903233758_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250903233758_InitialCreate.cs",
@@ -1680,7 +1710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 102,
               "Title": "20250903234106_create.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20250903234106_create.cs",
               "RelativeDocumentMoniker": "Migrations\\20250903234106_create.cs",
@@ -1691,7 +1721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 104,
               "Title": "20250903233255_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20250903233255_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250903233255_InitialCreate.cs",
@@ -1702,7 +1732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 105,
               "Title": "20250903232428_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20250903232428_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250903232428_InitialCreate.cs",
@@ -1713,7 +1743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 106,
               "Title": "20250903230353_AddTeacherName.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20250903230353_AddTeacherName.cs",
               "RelativeDocumentMoniker": "Migrations\\20250903230353_AddTeacherName.cs",
@@ -1724,7 +1754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 107,
               "Title": "20250903225841_FixPendingChanges.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20250903225841_FixPendingChanges.cs",
               "RelativeDocumentMoniker": "Migrations\\20250903225841_FixPendingChanges.cs",
@@ -1735,7 +1765,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 108,
               "Title": "20250903225735_FixPendingChanges.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20250903225735_FixPendingChanges.cs",
               "RelativeDocumentMoniker": "Migrations\\20250903225735_FixPendingChanges.cs",
@@ -1746,7 +1776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 109,
               "Title": "20250903225217_update Teachers table.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\Migrations\\20250903225217_update Teachers table.cs",
               "RelativeDocumentMoniker": "Migrations\\20250903225217_update Teachers table.cs",
@@ -1757,7 +1787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 110,
               "Title": "20241222130933_initial.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\School Project API\\Migrations\\20241222130933_initial.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\School Project API\\Migrations\\20241222130933_initial.cs",
@@ -1765,6 +1795,40 @@
               "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\School Project API\\Migrations\\20241222130933_initial.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T13:09:33.533Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "fedb5a51-4087-4a1c-90b9-5e7ea0924ccb",
+        "Display": 0,
+        "X": 774,
+        "Y": 90,
+        "Width": 742,
+        "Height": 758,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Downloads\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\user\\Downloads\\UserConfiguration.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\UserConfiguration.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T01:10:16.381Z",
+              "EditorCaption": ""
             }
           ]
         }

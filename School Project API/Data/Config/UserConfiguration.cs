@@ -38,6 +38,11 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                .HasMaxLength(100)
                .IsRequired();
 
+
+        builder.Property(u=>u.ProfileImagePath)
+            .HasMaxLength(500)
+            .IsRequired(false); // This means the column can be NULL, which is appropriate for users who haven't uploaded a profile image.
+
         // Seed Data
         builder.HasData(
 

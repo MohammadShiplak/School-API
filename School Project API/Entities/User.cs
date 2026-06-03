@@ -14,6 +14,6 @@
         
         public string Role { get; set; }  
      
-
+        public string? ProfileImagePath { get; set; }   
     }
 }

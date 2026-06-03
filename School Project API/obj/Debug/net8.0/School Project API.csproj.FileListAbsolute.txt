@@ -506,3 +506,4 @@ C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.pdb
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\School Project API.genruntimeconfig.cache
 C:\Users\user\Desktop\School API\School-API\School Project API\obj\Debug\net8.0\ref\School Project API.dll
+C:\Users\user\Desktop\School API\School-API\School Project API\bin\Debug\net8.0\School Project API.staticwebassets.runtime.json

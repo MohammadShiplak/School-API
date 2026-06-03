@@ -11,5 +11,7 @@
         public string Role { get; set; }
 
         public bool IsActive { get; set; }
+
+        public IFormFile? ProfileImage { get; set; } // Optional profile image upload   
     }
 }

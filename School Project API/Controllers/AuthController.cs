@@ -32,7 +32,8 @@ namespace StudentApi.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterDTO registerDTO)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> Register([FromForm] RegisterDTO registerDTO)
         {
 
             var success = await _authService.RegisterAsync(registerDTO);
@@ -43,19 +44,7 @@ namespace StudentApi.Controllers
 
             return Ok("User registered successfully");
 
-
-
         }
-
-
-
-
-
-
-
-
-
-
 
 
         // This endpoint handles user login.

@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "4VdBENqoRYSxdPRD4eXjcKREbjIy0X5eFOI0rBiXrQk=",
+  "Hash": "bJHoo5Gef/Z9/LgHZFMMKf9ypiKl0W2npwdCL3O+pWc=",
   "Source": "School Project API",
   "BasePath": "_content/School Project API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "School Project API\\wwwroot",
+      "Source": "School Project API",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\",
+      "BasePath": "_content/School Project API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

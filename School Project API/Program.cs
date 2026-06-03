@@ -132,6 +132,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+http://localhost:5000/avatars/someimage.jpg
+app.UseStaticFiles(); // for serving profile images from wwwroot        
+
 app.UseCors("ReactPolicy");
 app.UseAuthentication(); // ← MUST be before UseAuthorization
 app.UseAuthorization();
