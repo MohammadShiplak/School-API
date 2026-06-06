@@ -67,7 +67,7 @@ namespace School_Project_API.Controllers
 
       
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Teacher")]
       
         public async Task<ActionResult<HomeworkDTO>> AddHomework(HomeworkDTO homeworkDTO)
         {

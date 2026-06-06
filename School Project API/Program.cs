@@ -1,35 +1,21 @@
-﻿using Microsoft.EntityFrameworkCore;
-using School_Project_API.Services;
-using School_Project_API.Services.Interfaces;
-using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿// ✅ All using statements — MUST be first
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using School_Project_API.Services;
-using School_Project_API.Services.Interfaces;
-using System.Text;
-using Microsoft.OpenApi.Models;
-
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
 using School_Project_API.Services;
 using School_Project_API.Services.Interfaces;
-using System.Text;
-using System.Security.Claims;
+using School_Project_API.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ── Step 1: DbContext ─────────────────────────────────────────
+// ── DbContext ─────────────────────────────────────────────────
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration
         .GetConnectionString("DefaultConnection")));
 
-// ── Step 2: Register Services ─────────────────────────────────
+// ── Services ──────────────────────────────────────────────────
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<ITeacherService, TeacherService>();
@@ -39,73 +25,77 @@ builder.Services.AddScoped<IClassService, ClassService>();
 builder.Services.AddScoped<IAccessCardService, AccessCardService>();
 builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<IAttendanceService, AttendanceService>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IHomeworkService, HomeworkService>();
 
-// ─── 2. CORS ──────────────────────────────────────────────────
+builder.Services.AddSignalR();
+
+
+// ── CORS ──────────────────────────────────────────────────────
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("ReactPolicy", policy =>
     {
         policy
             .WithOrigins(
-                "http://localhost:5173",    // ← NO trailing slash
-                "https://localhost:5173"    // ← NO trailing slash
+                "http://localhost:5173",
+                "https://localhost:5173"
             )
             .AllowAnyHeader()
-            .AllowAnyMethod();
-            
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
 });
 
-
-
-
-
-
-
-
-
-
-// ── Step 3: JWT Authentication ────────────────────────────────
+// ── JWT Authentication ────────────────────────────────────────
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
         options.MapInboundClaims = false;
 
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+                var path = context.HttpContext.Request.Path;
+
+                if (!string.IsNullOrEmpty(accessToken) &&
+                    path.StartsWithSegments("/hubs"))
+                {
+                    context.Token = accessToken;
+                }
+                return Task.CompletedTask;
+            }
+        };
+
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateIssuer           = true,
-            ValidateAudience         = true,
-            ValidateLifetime         = true,
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer              = builder.Configuration["Jwt:Issuer"],
-            ValidAudience            = builder.Configuration["Jwt:Audience"],
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
-
-           
         };
     });
 
-
-// ── Step 4: Controllers ───────────────────────────────────────
+// ── Controllers + Swagger ─────────────────────────────────────
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-
-// ── Step 5: Swagger WITH JWT ──────────────────────────────────
-// ✅ FIX 3: Only ONE AddSwaggerGen call with JWT config inside
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
-        Type = SecuritySchemeType.Http, // ← Http not ApiKey
-        Scheme = "bearer",                // ← must be lowercase
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Enter your JWT token only — Swagger adds 'Bearer ' prefix automatically"
+        Description = "Enter your JWT token"
     });
-
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -124,7 +114,7 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
-// ── Step 6: Middleware Pipeline (ORDER MATTERS!) ──────────────
+// ── Middleware Pipeline ───────────────────────────────────────
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -132,11 +122,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-http://localhost:5000/avatars/someimage.jpg
-app.UseStaticFiles(); // for serving profile images from wwwroot        
+app.UseStaticFiles();
 
 app.UseCors("ReactPolicy");
-app.UseAuthentication(); // ← MUST be before UseAuthorization
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapHub<NotificationHub>("/hubs/notifications");
 app.Run();

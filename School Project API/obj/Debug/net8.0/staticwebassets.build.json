@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bJHoo5Gef/Z9/LgHZFMMKf9ypiKl0W2npwdCL3O+pWc=",
+  "Hash": "KQ+REEMN0boM6gwlGHwtEE61xES5FunQl4ds7996/7U=",
   "Source": "School Project API",
   "BasePath": "_content/School Project API",
   "Mode": "Default",
@@ -15,5 +15,44 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\avatars\\43aebf20-2c94-4bca-acc9-b6ba395a27da.jpg",
+      "SourceId": "School Project API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\",
+      "BasePath": "_content/School Project API",
+      "RelativePath": "avatars/43aebf20-2c94-4bca-acc9-b6ba395a27da.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\avatars\\43aebf20-2c94-4bca-acc9-b6ba395a27da.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\avatars\\a662af8e-9d9f-4993-90d4-968e9b127053.jpg",
+      "SourceId": "School Project API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\",
+      "BasePath": "_content/School Project API",
+      "RelativePath": "avatars/a662af8e-9d9f-4993-90d4-968e9b127053.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\avatars\\a662af8e-9d9f-4993-90d4-968e9b127053.jpg"
+    }
+  ]
 }

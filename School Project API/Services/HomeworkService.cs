@@ -10,10 +10,11 @@ namespace School_Project_API.Services
     {
 
         private readonly ApplicationDbContext _context;
-
-        public HomeworkService(ApplicationDbContext context)
+       private readonly INotificationService _notificationService;
+        public HomeworkService(ApplicationDbContext context,INotificationService notificationService)
         {
-_context = context; 
+_context = context;
+            _notificationService = notificationService;
         }
 
      private static HomeworkDTO MapToDTO(Homework homework)
@@ -62,9 +63,33 @@ _context = context;
 
             await _context.Entry(homework).Reference(h => h.Teacher).LoadAsync();
             await _context.Entry(homework).Reference(h => h.Class).LoadAsync();
-            await _context.Entry(homework).Reference(h => h.Subject).LoadAsync();   
+            await _context.Entry(homework).Reference(h => h.Subject).LoadAsync();
 
-return MapToDTO(homework);  
+            var teacherName = homework.Teacher?.Name ?? $"Teacher #{homework.TeacherId}";
+            var className = homework.Class?.Name ?? "No Class";   
+            var subjectName = homework.Subject?.SubjectName ?? "No Subject";    
+            var dueDate = homework.DueDate.ToString("yyyy-MM-dd");
+
+            await _notificationService.SendToRoleAsync(
+        role: "Student",
+        message: $"📚 New homework: '{homework.Title}' | {className} | Due {dueDate}",
+        type: "info"
+    );
+
+         
+           
+
+            await _notificationService.SendToRoleAsync(
+                role: "Admin",
+                message: $"📋 Homework '{homework.Title}' assigned in {className} " +
+                         $"by {teacherName} — due {dueDate}",
+                type: "info"
+            );
+
+
+
+
+            return MapToDTO(homework);  
         }
 
         public async Task<bool> DeleteHomeworkAsync(int id)

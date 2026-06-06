@@ -9,9 +9,11 @@ namespace School_Project_API.Services
     {
         private readonly ApplicationDbContext _context;
 
-        public AttendanceService(ApplicationDbContext context)
+      private readonly INotificationService _notificationService;
+        public AttendanceService(ApplicationDbContext context, INotificationService notificationService)
         {
             _context = context;
+            _notificationService = notificationService; 
         }
 
         private static AttendanceDTO MapToDTO(Attendance attendance)
@@ -79,8 +81,24 @@ namespace School_Project_API.Services
                      .Reference(a => a.Student)
                      .LoadAsync();
 
-                // ── Step 6: Return DTO with real Id ──────────────────────────
-                return MapToDTO(attendance);
+            var statusLabel = attendance.Status.ToString();
+
+            var studentName=attendance.Student != null ? $"{attendance.Student.FirstName} {attendance.Student.LastName}" : $"Student #{attendance.StudentId}";
+
+            var dateLabel = attendance.Date?.ToString("MMM dd, yyyy") ?? "today";
+
+            await _notificationService.SendToRoleAsync(
+                role: "admin",
+                message: $"📋 {studentName} marked {statusLabel} on {dateLabel}", // ← use dateLabel
+                type: attendance.Status == AttendanceStatus.Absent ? "warning" : "success"
+            
+                   
+
+            );  
+
+
+            // ── Step 6: Return DTO with real Id ──────────────────────────
+            return MapToDTO(attendance);
             }
 
 
