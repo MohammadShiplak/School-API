@@ -311,6 +311,123 @@
     ]
   },
   {
+    "ContainingType": "School_Project_API.Controllers.AttendanceAlertController",
+    "Method": "GetAllAlerts",
+    "RelativePath": "api/AttendanceAlert",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[School_Project_API.DTO.AttendanceAlertDTO, School Project API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "School_Project_API.Controllers.AttendanceAlertController",
+    "Method": "ResolveAlert",
+    "RelativePath": "api/AttendanceAlert/{id}/resolve",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "resolveDTO",
+        "Type": "School_Project_API.DTO.ResolveAlertDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "School_Project_API.DTO.AttendanceAlertDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "School_Project_API.Controllers.AttendanceAlertController",
+    "Method": "GetActiveAlerts",
+    "RelativePath": "api/AttendanceAlert/active",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[School_Project_API.DTO.AttendanceAlertDTO, School Project API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "School_Project_API.Controllers.AttendanceAlertController",
+    "Method": "GetActiveAlertCount",
+    "RelativePath": "api/AttendanceAlert/count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "School_Project_API.Controllers.AttendanceAlertController",
+    "Method": "GetAlertsByStudent",
+    "RelativePath": "api/AttendanceAlert/student/{studentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[School_Project_API.DTO.AttendanceAlertDTO, School Project API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "StudentApi.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",

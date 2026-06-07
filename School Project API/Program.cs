@@ -27,7 +27,7 @@ builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<IAttendanceService, AttendanceService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IHomeworkService, HomeworkService>();
-
+builder.Services.AddScoped<IAttendanceAlertService, AttendanceAlertService>();
 builder.Services.AddSignalR();
 
 

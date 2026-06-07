@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7fXhieMqjqDwmflV9+COoQ+hCF/5H+46P855TZJCK5I=",
+  "Hash": "HRCJZr0USMeX7K75Wb6UBAydrhBMTRZhr0p5goIHBlg=",
   "Source": "School Project API",
   "BasePath": "_content/School Project API",
   "Mode": "Default",
@@ -55,6 +55,44 @@
       "OriginalItemSpec": "wwwroot\\avatars\\a662af8e-9d9f-4993-90d4-968e9b127053.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\homework-files\\certificate-of-completion-for-secure-your-apis-jwt-roles-policies-in-asp-net-core_ebcc8af7-c7a1-4548-a7cb-c02a838e3271.pdf",
+      "SourceId": "School Project API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\",
+      "BasePath": "_content/School Project API",
+      "RelativePath": "homework-files/certificate-of-completion-for-secure-your-apis-jwt-roles-policies-in-asp-net-core_ebcc8af7-c7a1-4548-a7cb-c02a838e3271.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\homework-files\\certificate-of-completion-for-secure-your-apis-jwt-roles-policies-in-asp-net-core_ebcc8af7-c7a1-4548-a7cb-c02a838e3271.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\homework-files\\Coursera NH27RVDJ8XIN_25f3e834-1f49-4e24-8345-68ca21ca3f40.pdf",
+      "SourceId": "School Project API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\",
+      "BasePath": "_content/School Project API",
+      "RelativePath": "homework-files/Coursera NH27RVDJ8XIN_25f3e834-1f49-4e24-8345-68ca21ca3f40.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\homework-files\\Coursera NH27RVDJ8XIN_25f3e834-1f49-4e24-8345-68ca21ca3f40.pdf"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\homework-files\\Coursera NH27RVDJ8XIN_99e9667a-a367-41b5-a7c2-a8c88caf3a24.pdf",
       "SourceId": "School Project API",
       "SourceType": "Discovered",
@@ -74,12 +112,12 @@
       "OriginalItemSpec": "wwwroot\\homework-files\\Coursera NH27RVDJ8XIN_99e9667a-a367-41b5-a7c2-a8c88caf3a24.pdf"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\homework-files\\Mohammad_Shiplak_Resume_Updated_FullStack_07cfddb2-ef3b-4ced-b1cc-da3368fdf1f6.pdf",
+      "Identity": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\homework-files\\Mohammad Khaled Shiplak CV 2026.pdf_826d9c62-05dd-4c80-83af-13ab4daf16a3.pdf",
       "SourceId": "School Project API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\School API\\School-API\\School Project API\\wwwroot\\",
       "BasePath": "_content/School Project API",
-      "RelativePath": "homework-files/Mohammad_Shiplak_Resume_Updated_FullStack_07cfddb2-ef3b-4ced-b1cc-da3368fdf1f6.pdf",
+      "RelativePath": "homework-files/Mohammad Khaled Shiplak CV 2026.pdf_826d9c62-05dd-4c80-83af-13ab4daf16a3.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\homework-files\\Mohammad_Shiplak_Resume_Updated_FullStack_07cfddb2-ef3b-4ced-b1cc-da3368fdf1f6.pdf"
+      "OriginalItemSpec": "wwwroot\\homework-files\\Mohammad Khaled Shiplak CV 2026.pdf_826d9c62-05dd-4c80-83af-13ab4daf16a3.pdf"
     }
   ]
 }

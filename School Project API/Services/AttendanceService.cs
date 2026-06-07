@@ -10,10 +10,12 @@ namespace School_Project_API.Services
         private readonly ApplicationDbContext _context;
 
       private readonly INotificationService _notificationService;
-        public AttendanceService(ApplicationDbContext context, INotificationService notificationService)
+        private readonly IAttendanceAlertService _alertService;
+        public AttendanceService(ApplicationDbContext context, INotificationService notificationService, IAttendanceAlertService alertService)
         {
             _context = context;
-            _notificationService = notificationService; 
+            _notificationService = notificationService;
+            _alertService = alertService;
         }
 
         private static AttendanceDTO MapToDTO(Attendance attendance)
@@ -88,13 +90,30 @@ namespace School_Project_API.Services
             var dateLabel = attendance.Date?.ToString("MMM dd, yyyy") ?? "today";
 
             await _notificationService.SendToRoleAsync(
-                role: "admin",
+                role: "Teacher",
                 message: $"📋 {studentName} marked {statusLabel} on {dateLabel}", // ← use dateLabel
-                type: attendance.Status == AttendanceStatus.Absent ? "warning" : "success"
-            
-                   
+                type: attendance.Status == AttendanceStatus.Absent ? "warning" : "success"    
+            );
 
-            );  
+
+
+            // ── Step 7: NEW — Check for consecutive absence alert ──────────
+            // WHY only check when status is Absent:
+            //   If student is Present/Late/Excused, there's no consecutive
+            //   absence streak to check. Skip the check entirely — faster.
+            //
+            // WHY after SaveChangesAsync (not before):
+            //   CheckAndCreateAlertAsync queries the DB for recent attendances.
+            //   The record we just saved MUST be in the DB before we query it.
+            //   If we check BEFORE saving, the current absence isn't in the DB yet.
+            if (attendance.Status == AttendanceStatus.Absent)
+            {
+                await _alertService.CheckAndCreateAlertAsync(
+                    attendance.StudentId!.Value,
+                    attendance.Date!.Value
+                );
+            }
+
 
 
             // ── Step 6: Return DTO with real Id ──────────────────────────
