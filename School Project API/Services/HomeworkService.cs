@@ -10,14 +10,21 @@ namespace School_Project_API.Services
     {
 
         private readonly ApplicationDbContext _context;
-       private readonly INotificationService _notificationService;
-        public HomeworkService(ApplicationDbContext context,INotificationService notificationService)
+        private readonly INotificationService _notificationService;
+        private readonly IWebHostEnvironment _environment;
+
+
+        private static readonly string[] AllowedExtensions = { ".pdf", ".doc", ".docx", ".png", ".jpg", ".jpeg", ".ppt", ".pptx" };
+        private const long MaxFileSize = 10 * 1024 * 1024;
+
+        public HomeworkService(ApplicationDbContext context, INotificationService notificationService, IWebHostEnvironment environment)
         {
-_context = context;
+            _context = context;
             _notificationService = notificationService;
+            _environment = environment;
         }
 
-     private static HomeworkDTO MapToDTO(Homework homework)
+        private static HomeworkDTO MapToDTO(Homework homework)
         {
             return new HomeworkDTO
             {
@@ -27,23 +34,84 @@ _context = context;
                 Title = homework.Title,
                 Description = homework.Description,
                 DueDate = homework.DueDate,
-                CreatedAt = homework.CreatedAt, 
+                CreatedAt = homework.CreatedAt,
                 Status = homework.Status,
 
 
                 TeacherName = homework.Teacher != null ? homework.Teacher.Name : null,
                 ClassName = homework.Class != null ? homework.Class.Name : null,
-                SubjectName = homework.Subject != null ? homework.Subject.SubjectName : null   
+                SubjectName = homework.Subject != null ? homework.Subject.SubjectName : null,
+
+
+                FilePath = homework.FilePath,
+
+
+                FileName = homework.FilePath != null ? Path.GetFileName(homework.FilePath) : null
 
             };
-        }   
+        }
 
-        public async Task<HomeworkDTO> AddHomeworkAsync(HomeworkDTO homeworkDTO)
+
+        private async Task<string> SaveFileAsync(IFormFile file)
+        {
+
+            var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
+
+
+            if (!AllowedExtensions.Contains(extension))
+                throw new InvalidOperationException(
+                    $"File type '{extension}' is not allowed. Allowed: {string.Join(", ", AllowedExtensions)}");
+            if (file.Length > MaxFileSize)
+                throw new InvalidOperationException($"File size exceeds the maximum allowed size of {MaxFileSize / (1024 * 1024)} MB.");
+
+
+            var uploadsFolder = Path.Combine(_environment.WebRootPath, "homework-files");
+
+
+            Directory.CreateDirectory(uploadsFolder);
+
+            var originalFileName = Path.GetFileNameWithoutExtension(file.FileName);
+
+            var uniqueFileName = $"{originalFileName}_{Guid.NewGuid()}{extension}";
+
+            var fullPath = Path.Combine(uploadsFolder, uniqueFileName);
+
+
+            using (var fileStream = new FileStream(fullPath, FileMode.Create))
+            {
+                await file.CopyToAsync(fileStream);
+            }
+
+            // ── STEP 6: Return the RELATIVE path ───────────────────────────────
+            // WHY return relative path, not full path:
+            //   Full path: "C:/MyProject/wwwroot/homework-files/Chapter5_abc123.pdf"
+            //   Relative path: "homework-files/Chapter5_abc123.pdf"
+            //
+            //   We store RELATIVE in the DB because:
+            //   - The server's folder location changes between dev/production machines.
+            //   - The frontend needs a URL: https://localhost:7001/homework-files/name.pdf
+            //     That URL starts from the domain, not the full disk path.
+            //   - If you move the app to a new server, relative paths still work.
+
+            return $"homework-files/{uniqueFileName}";
+
+        }
+
+        public async Task<HomeworkDTO> AddHomeworkAsync(HomeworkCreateDTO homeworkDTO)
         {
             var teacherExists = await _context.Teacher.AnyAsync(t => t.Id == homeworkDTO.TeacherId);
 
             if (!teacherExists)
                 throw new InvalidOperationException($"Teacher with Id {homeworkDTO.TeacherId} does not exist.");
+
+            string? savedFilePath = null;   
+
+            if(homeworkDTO.AssignmentFile != null && homeworkDTO.AssignmentFile.Length > 0)
+            {
+                savedFilePath = await SaveFileAsync(homeworkDTO.AssignmentFile);
+            }   
+
+
 
             var homework = new Homework
             {
@@ -54,8 +122,9 @@ _context = context;
                 Description = homeworkDTO.Description,
                 DueDate = homeworkDTO.DueDate,
                 CreatedAt = DateTime.UtcNow, // Set created time on server
-                Status = homeworkDTO.Status
-            };  
+                Status = homeworkDTO.Status,
+                FilePath=savedFilePath
+            };
 
             _context.Homeworks.Add(homework);
             await _context.SaveChangesAsync(); // Save to get the generated Id
@@ -66,8 +135,8 @@ _context = context;
             await _context.Entry(homework).Reference(h => h.Subject).LoadAsync();
 
             var teacherName = homework.Teacher?.Name ?? $"Teacher #{homework.TeacherId}";
-            var className = homework.Class?.Name ?? "No Class";   
-            var subjectName = homework.Subject?.SubjectName ?? "No Subject";    
+            var className = homework.Class?.Name ?? "No Class";
+            var subjectName = homework.Subject?.SubjectName ?? "No Subject";
             var dueDate = homework.DueDate.ToString("yyyy-MM-dd");
 
             await _notificationService.SendToRoleAsync(
@@ -76,8 +145,8 @@ _context = context;
         type: "info"
     );
 
-         
-           
+
+
 
             await _notificationService.SendToRoleAsync(
                 role: "Admin",
@@ -89,12 +158,12 @@ _context = context;
 
 
 
-            return MapToDTO(homework);  
+            return MapToDTO(homework);
         }
 
         public async Task<bool> DeleteHomeworkAsync(int id)
         {
-          var homework=await _context.Homeworks.FindAsync(id);
+            var homework = await _context.Homeworks.FindAsync(id);
 
             if (homework == null)
                 return false;
@@ -104,6 +173,22 @@ _context = context;
             return true;
         }
 
+        private void DeleteFileFromDisk (string? filePath)
+        {
+            if (string.IsNullOrEmpty(filePath))
+                return;
+
+            var fullPath = Path.Combine(_environment.WebRootPath, filePath);
+
+
+            if (File.Exists(fullPath))
+            {
+                File.Delete(fullPath);
+            }
+
+
+        }
+   
         public async Task<PagedResponse<HomeworkDTO>> GetAllHomeworkAsync(int pageNumber, int pageSize)
         {
             var query = _context.Homeworks
@@ -140,6 +225,10 @@ _context = context;
                       TeacherName = h.Teacher != null ? h.Teacher.Name : "Unknown",
                       ClassName = h.Class != null ? h.Class.Name : null,
                       SubjectName = h.Subject != null ? h.Subject.SubjectName : null,
+                      FilePath = h.FilePath,
+                      FileName = h.FilePath != null ? Path.GetFileName(h.FilePath) : null,
+
+
                   })
                 .ToListAsync();
 
@@ -218,7 +307,7 @@ _context = context;
                   .ToListAsync();
         }
 
-        public async  Task<HomeworkDTO?> UpdateHomeworkAsync(int id, HomeworkDTO homeworkDTO)
+        public async  Task<HomeworkDTO?> UpdateHomeworkAsync(int id, HomeworkCreateDTO homeworkDTO)
         {
             // WHY Include here: We need to return TeacherName etc. in the response.
             // WHY not FindAsync: FindAsync doesn't support .Include().
@@ -230,6 +319,19 @@ _context = context;
 
             if (homework == null)
                 return null;
+
+            if(homeworkDTO.AssignmentFile != null && homeworkDTO.AssignmentFile.Length > 0)
+            {
+                // Delete old file if exists
+                DeleteFileFromDisk(homework.FilePath);
+
+                // Save new file
+                homework.FilePath = await SaveFileAsync(homeworkDTO.AssignmentFile);
+            }   
+
+
+
+
 
             // Only update fields the client is allowed to change.
             // WHY not update TeacherId or CreatedAt:
@@ -249,6 +351,21 @@ _context = context;
             await _context.SaveChangesAsync();
 
             return MapToDTO(homework);
+        }
+
+        public async Task<bool> DeleteHomeworkFileAsync(int homeworkId)
+        {
+            var homework = await _context.Homeworks.FindAsync(homeworkId);
+
+            if (homework == null || string.IsNullOrEmpty(homework.FilePath))
+                return false;
+
+            DeleteFileFromDisk(homework.FilePath);
+
+            homework.FilePath = null;
+            await _context.SaveChangesAsync();
+
+            return true;
         }
     }
 }

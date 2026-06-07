@@ -27,6 +27,7 @@
 
         public HomeworkStatus Status { get; set; } = HomeworkStatus.Active;   
 
+        public string? FilePath { get; set; }   
     }
     public enum HomeworkStatus
     {

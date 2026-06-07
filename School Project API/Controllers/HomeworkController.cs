@@ -68,8 +68,8 @@ namespace School_Project_API.Controllers
       
         [HttpPost]
         [Authorize(Roles = "Admin,Teacher")]
-      
-        public async Task<ActionResult<HomeworkDTO>> AddHomework(HomeworkDTO homeworkDTO)
+        [Consumes("multipart/form-data")]
+        public async Task<ActionResult<HomeworkDTO>> AddHomework([FromForm] HomeworkCreateDTO homeworkDTO)
         {
        
             try
@@ -91,10 +91,10 @@ namespace School_Project_API.Controllers
         }
 
         [HttpPut("{id:int}")]
-        
-          [Authorize(Roles = "Admin,Teacher")]
+        [Authorize(Roles = "Admin,Teacher")]
+        [Consumes("multipart/form-data")]
       
-        public async Task<ActionResult<HomeworkDTO>> UpdateHomework(int id, HomeworkDTO homeworkDTO)
+        public async Task<ActionResult<HomeworkDTO>> UpdateHomework(int id, [FromForm] HomeworkCreateDTO homeworkDTO)
         {
             var updated = await _homeworkService.UpdateHomeworkAsync(id, homeworkDTO);
 
@@ -116,6 +116,20 @@ namespace School_Project_API.Controllers
 
             return Ok($"Homework with Id {id} deleted successfully.");
         }
+
+
+        [HttpDelete("{id:int}/file")]
+        [Authorize(Roles = "Admin,Teacher")]
+        public async Task<IActionResult> DeleteHomeworkFile(int id)
+        {
+            var deleted = await _homeworkService.DeleteHomeworkFileAsync(id);
+
+            if (!deleted)
+                return NotFound($"Homework {id} not found or has no file to delete.");
+
+            return Ok($"File for Homework {id} deleted successfully.");
+        }
+
     }
 
 }

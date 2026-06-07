@@ -35,6 +35,10 @@ namespace School_Project_API.Data.Config
                    .HasConversion<int>();
 
 
+            builder.Property(h => h.FilePath)
+                        .HasMaxLength(500)
+                        .IsRequired(false); 
+
 
             // ── RELATIONSHIPS ─────────────────────────────────────────── 
 
@@ -77,7 +81,10 @@ namespace School_Project_API.Data.Config
         Status = HomeworkStatus.Active,
         TeacherId = 1,
         ClassId = 1,
-        SubjectId = 1
+        SubjectId = 1,
+        FilePath = null,
+
+
     },
     new Homework
     {
@@ -89,7 +96,8 @@ namespace School_Project_API.Data.Config
         Status = HomeworkStatus.Active,
         TeacherId = 1,
         ClassId = 2,
-        SubjectId = 2
+        SubjectId = 2,
+        FilePath = null,
     },
     new Homework
     {
@@ -101,7 +109,8 @@ namespace School_Project_API.Data.Config
         Status = HomeworkStatus.Archived,
         TeacherId = 2,
         ClassId = 1,
-        SubjectId = 3
+        SubjectId = 3,
+        FilePath=null,
     },
     new Homework
     {
@@ -113,7 +122,8 @@ namespace School_Project_API.Data.Config
         Status = HomeworkStatus.Archived,
         TeacherId = 2,
         ClassId = 3,
-        SubjectId = 4
+        SubjectId = 4,
+        FilePath = null,
     },
     new Homework
     {
@@ -125,7 +135,8 @@ namespace School_Project_API.Data.Config
         Status = HomeworkStatus.Active,
         TeacherId = 3,
         ClassId = 2,
-        SubjectId = 5
+        SubjectId = 5,
+        FilePath = null,
     },
     new Homework
     {
@@ -137,7 +148,8 @@ namespace School_Project_API.Data.Config
         Status = HomeworkStatus.Active,
         TeacherId = 3,
         ClassId = 4,
-        SubjectId = 6
+        SubjectId = 6,
+        FilePath = null,
     },
     new Homework
     {
@@ -149,7 +161,8 @@ namespace School_Project_API.Data.Config
         Status = HomeworkStatus.Archived,
         TeacherId = 4,
         ClassId = 3,
-        SubjectId = 7
+        SubjectId = 7,
+        FilePath = null,
     },
     new Homework
     {
@@ -173,7 +186,8 @@ namespace School_Project_API.Data.Config
         Status = HomeworkStatus.Active,
         TeacherId = 5,
         ClassId = 5,
-        SubjectId = 9
+        SubjectId = 9,
+        FilePath = null,
     },
     new Homework
     {
@@ -185,7 +199,8 @@ namespace School_Project_API.Data.Config
         Status = HomeworkStatus.Active,
         TeacherId = 5,
         ClassId = 5,
-        SubjectId = 10
+        SubjectId = 10,
+        FilePath = null,
     }
 );
 
