@@ -12,6 +12,10 @@
         public int Capacity { get; set; }
         public string Description { get; set; }
 
-public Teacher Teacher { get; set; }        
+public Teacher Teacher { get; set; }
+
+        public ICollection<StudentClass> StudentClasses { get; set; }=new List<StudentClass>();
+
+
     }
 }

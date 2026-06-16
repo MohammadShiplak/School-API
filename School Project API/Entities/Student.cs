@@ -53,6 +53,6 @@ namespace School_Project_API.Entities
 
 
 
-
+        public ICollection<StudentClass> StudentClasses { get; set; } = new List<StudentClass>();
     }
 }

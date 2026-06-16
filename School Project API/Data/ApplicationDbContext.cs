@@ -15,9 +15,18 @@ public class ApplicationDbContext : DbContext
     public DbSet<Course> Course { get; set; }
     public DbSet<Subject> Subjects { get; set; }
 
+    public DbSet<StudentClass> StudentClasses { get; set; } 
+
+
     public DbSet<AttendanceAlert> AttendanceAlerts { get; set; }
     public DbSet<Homework> Homeworks { get; set; }  
     public DbSet<Attendance> Attendances { get; set; }  
+
+    public DbSet<Exam> Exams { get; set; }
+    public DbSet<CourseProgress>CourseProgress { get; set; }
+
+
+
     // ── Constructor (receives connection string from Program.cs) ──
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)

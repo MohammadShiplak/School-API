@@ -65,7 +65,7 @@ namespace School_Project_API.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Teacher")]
         public async Task<ActionResult<CourseDTO>> AddCourse(CourseDTO course)
         {
 
@@ -78,7 +78,7 @@ namespace School_Project_API.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Teacher")]
         public async Task<ActionResult<StudentDTO>> Updatecourses(int id, CourseDTO courseDTO)
         {
 

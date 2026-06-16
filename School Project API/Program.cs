@@ -7,6 +7,7 @@ using System.Text;
 using School_Project_API.Services;
 using School_Project_API.Services.Interfaces;
 using School_Project_API.Hubs;
+using School_Project_API.Data.Config;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +29,8 @@ builder.Services.AddScoped<IAttendanceService, AttendanceService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IHomeworkService, HomeworkService>();
 builder.Services.AddScoped<IAttendanceAlertService, AttendanceAlertService>();
+builder.Services.AddScoped<IProgressService, ProgressService>();
+builder.Services.AddScoped<IClassEnrollmentService, ClassEnrollmentService>();
 builder.Services.AddSignalR();
 
 

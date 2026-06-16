@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace School_Project_API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260611012635_Update Columns")]
+    partial class UpdateColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1055,26 +1058,6 @@ namespace School_Project_API.Migrations
                         });
                 });
 
-            modelBuilder.Entity("School_Project_API.Entities.StudentClass", b =>
-                {
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ClassId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("EnrolledAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.HasKey("StudentId", "ClassId");
-
-                    b.HasIndex("ClassId");
-
-                    b.ToTable("StudentClasses", (string)null);
-                });
-
             modelBuilder.Entity("School_Project_API.Entities.StudentSubjects", b =>
                 {
                     b.Property<int>("StudentId")
@@ -1519,25 +1502,6 @@ namespace School_Project_API.Migrations
                     b.Navigation("Department");
                 });
 
-            modelBuilder.Entity("School_Project_API.Entities.StudentClass", b =>
-                {
-                    b.HasOne("School_Project_API.Entities.Class", "Class")
-                        .WithMany("StudentClasses")
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("School_Project_API.Entities.Student", "Student")
-                        .WithMany("StudentClasses")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Class");
-
-                    b.Navigation("Student");
-                });
-
             modelBuilder.Entity("School_Project_API.Entities.StudentSubjects", b =>
                 {
                     b.HasOne("School_Project_API.Entities.Student", "Student")
@@ -1591,11 +1555,6 @@ namespace School_Project_API.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("School_Project_API.Entities.Class", b =>
-                {
-                    b.Navigation("StudentClasses");
-                });
-
             modelBuilder.Entity("School_Project_API.Entities.Course", b =>
                 {
                     b.Navigation("Subject");
@@ -1606,11 +1565,6 @@ namespace School_Project_API.Migrations
                     b.Navigation("Students");
 
                     b.Navigation("Teachers");
-                });
-
-            modelBuilder.Entity("School_Project_API.Entities.Student", b =>
-                {
-                    b.Navigation("StudentClasses");
                 });
 
             modelBuilder.Entity("School_Project_API.Entities.Teacher", b =>
