@@ -16,6 +16,7 @@ public Teacher Teacher { get; set; }
 
         public ICollection<StudentClass> StudentClasses { get; set; }=new List<StudentClass>();
 
+        public ICollection<ClassSubject> ClassSubjects { get; set; } =new List<ClassSubject>(); 
 
     }
 }

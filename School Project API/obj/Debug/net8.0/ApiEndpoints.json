@@ -725,6 +725,105 @@
     ]
   },
   {
+    "ContainingType": "School_Project_API.Controllers.ClassSubjectController",
+    "Method": "AssignSubjectToClass",
+    "RelativePath": "api/ClassSubject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "School_Project_API.DTO.ClassSubjectDTO\u002BClassSubjectWriteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "School_Project_API.DTO.ClassSubjectDTO\u002BClassSubjectReadDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "School_Project_API.Controllers.ClassSubjectController",
+    "Method": "RemoveSubjectFromClass",
+    "RelativePath": "api/ClassSubject/{classId}/{subjectId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "classId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "subjectId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "School_Project_API.Controllers.ClassSubjectController",
+    "Method": "GetSubjectsByClass",
+    "RelativePath": "api/ClassSubject/class/{classId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "classId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[School_Project_API.DTO.ClassSubjectDTO\u002BClassSubjectReadDTO, School Project API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "School_Project_API.Controllers.ClassSubjectController",
+    "Method": "GetClassesBySubject",
+    "RelativePath": "api/ClassSubject/subject/{subjectId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subjectId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[School_Project_API.DTO.ClassSubjectDTO\u002BClassSubjectReadDTO, School Project API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "School_Project_API.Controllers.CourseController",
     "Method": "GetAllCourses",
     "RelativePath": "api/Course",

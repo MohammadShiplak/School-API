@@ -19,8 +19,8 @@ namespace School_Project_API.Entities
 
         public Teacher Teacher { get; set; }    
 
-        public ICollection<Student> Student { get; set; }  = new List<Student>();  
+        public ICollection<Student> Student { get; set; }  = new List<Student>();
+        public ICollection<ClassSubject> ClassSubjects { get; set; } = new List<ClassSubject>();
 
-        
     }
 }
