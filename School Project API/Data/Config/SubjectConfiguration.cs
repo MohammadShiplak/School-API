@@ -44,19 +44,26 @@ namespace School_Project_API.Data.Config
                 .WithMany(s => s.Subject)
                 .HasForeignKey(f => f.TeacherId);
 
+            builder.HasOne(d=>d.Department)
+                .WithMany(s=>s.Subjects)
+                .HasForeignKey(f=>f.DepartmentId)
+                .OnDelete(DeleteBehavior.Restrict);  
+
+
+
 
 
             builder.HasData(
-    new Subject { Id = 1, SubjectName = "C#", Price = 50, CourseId = 1, TeacherId = 1 },
-    new Subject { Id = 2, SubjectName = "EF Core", Price = 60, CourseId = 1, TeacherId = 1 },
-    new Subject { Id = 3, SubjectName = "HTML", Price = 40, CourseId = 2, TeacherId = 2 },
-    new Subject { Id = 4, SubjectName = "CSS", Price = 40, CourseId = 2, TeacherId = 2 },
-    new Subject { Id = 5, SubjectName = "SQL Basics", Price = 55, CourseId = 3, TeacherId = 4 },
-    new Subject { Id = 6, SubjectName = "Docker Basics", Price = 65, CourseId = 4, TeacherId = 7 },
-    new Subject { Id = 7, SubjectName = "Azure Fundamentals", Price = 75, CourseId = 5, TeacherId = 9 },
-    new Subject { Id = 8, SubjectName = "Python Basics", Price = 45, CourseId = 6, TeacherId = 9 },
-    new Subject { Id = 9, SubjectName = "Ethical Hacking", Price = 90, CourseId = 7, TeacherId = 8 },
-    new Subject { Id = 10, SubjectName = "Data Structures", Price = 100, CourseId = 10, TeacherId = 10 }
+    new Subject { Id = 1, SubjectName = "C#", Price = 50, CourseId = 1, TeacherId = 1,DepartmentId=1 },
+    new Subject { Id = 2, SubjectName = "EF Core", Price = 60, CourseId = 1, TeacherId = 1, DepartmentId = 2 },
+    new Subject { Id = 3, SubjectName = "HTML", Price = 40, CourseId = 2, TeacherId = 2, DepartmentId = 3 },
+    new Subject { Id = 4, SubjectName = "CSS", Price = 40, CourseId = 2, TeacherId = 2 , DepartmentId = 4 },
+    new Subject { Id = 5, SubjectName = "SQL Basics", Price = 55, CourseId = 3, TeacherId = 4, DepartmentId = 5 },
+    new Subject { Id = 6, SubjectName = "Docker Basics", Price = 65, CourseId = 4, TeacherId = 7 , DepartmentId = 6 },
+    new Subject { Id = 7, SubjectName = "Azure Fundamentals", Price = 75, CourseId = 5, TeacherId = 9 , DepartmentId = 7 },
+    new Subject { Id = 8, SubjectName = "Python Basics", Price = 45, CourseId = 6, TeacherId = 9 , DepartmentId = 8 },
+    new Subject { Id = 9, SubjectName = "Ethical Hacking", Price = 90, CourseId = 7, TeacherId = 8 , DepartmentId = 9 },
+    new Subject { Id = 10, SubjectName = "Data Structures", Price = 100, CourseId = 10, TeacherId = 10 , DepartmentId = 4 }
 );
 
 

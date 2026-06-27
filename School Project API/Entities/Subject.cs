@@ -10,9 +10,10 @@ namespace School_Project_API.Entities
         public int CourseId { get; set; }
 
         public int TeacherId { get; set; }  
-        public string ?SubjectName { get; set; }    
+        public string ?SubjectName { get; set; }
 
-
+        public int DepartmentId { get; set; }   // FK
+        public Department Department { get; set; }  // Navigation
         public decimal Price { get; set; }
 
         public Course Course { get; set; }

@@ -1084,6 +1084,32 @@
     ]
   },
   {
+    "ContainingType": "School_Project_API.Controllers.DepartmentController",
+    "Method": "GetDepartmentStatistics",
+    "RelativePath": "api/Department/{id}/statistics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "School_Project_API.DTO.DepartmentStatisticsDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "School_Project_API.Controllers.HomeworkController",
     "Method": "GetAllHomework",
     "RelativePath": "api/Homework",

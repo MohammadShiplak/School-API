@@ -14,7 +14,7 @@ namespace School_Project_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize (Roles ="Admin")]
+    [Authorize (Roles ="Teacher")]
     public class DepartmentController : ControllerBase
     {
      
@@ -103,9 +103,23 @@ namespace School_Project_API.Controllers
 
         }
 
+        [HttpGet("{id:int}/statistics")]
+
+        public async Task<ActionResult<DepartmentStatisticsDTO>>GetDepartmentStatistics(int id)
+        {
+
+            if (id <= 0)
+                return BadRequest($"Id `{id}` must be a positive number.");
+
+            var stats = await _departmentService.GetDepartmentStatisticsAsync(id);
+
+            if (stats == null)
+                return NotFound($"Department with Id {id} was not found");
 
 
+            return Ok(stats);   
 
+        }
 
 
 

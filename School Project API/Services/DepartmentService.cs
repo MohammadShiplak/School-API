@@ -92,6 +92,55 @@ namespace School_Project_API.Services
 
         }
 
+        public async Task<DepartmentStatisticsDTO> GetDepartmentStatisticsAsync(int id)
+        { 
+         var departmentExists= await _context.Departments
+                .AnyAsync(d=>d.Id == id);
+
+            if (!departmentExists)
+                return null;
+
+            var departmentName = await _context.Departments
+                .Where(d => d.Id == id)
+                .Select(n => n.Name)
+                .FirstOrDefaultAsync();
+
+            var totalTeachers=await _context.Teacher
+                .AsNoTracking()
+                .CountAsync(t=>t.DepartmentId == id);   
+
+
+            var totalSubjects=await _context.Subjects
+                .AsNoTracking()
+                .CountAsync(d=>d.DepartmentId ==id);
+
+
+            var totalStudents = await _context.Students
+               .AsNoTracking()
+               .CountAsync(s => s.DepartmentId == id);
+
+            var totalClasses = await _context.Class
+                .AsNoTracking()
+                .CountAsync(c => c.DepartmentId == id);
+
+
+            return new DepartmentStatisticsDTO
+            {
+                DepartmentId = id,
+                DepartmentName = departmentName,
+                TotalTeachers = totalTeachers,
+                TotalSubjects = totalSubjects,
+                TotalClasses = totalClasses,
+
+            };
+
+
+
+
+
+        }
+
+
         public async Task<DepartmentDTO> UpdateDepartmentAsync(int id, DepartmentDTO departmentDTO)
         {
 

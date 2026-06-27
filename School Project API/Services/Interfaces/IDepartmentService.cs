@@ -11,5 +11,7 @@ namespace School_Project_API.Services.Interfaces
 
         Task<DepartmentDTO> UpdateDepartmentAsync(int id, DepartmentDTO departmentDTO);
         Task<bool> DeleteDepartemntAsync(int id);
+
+        Task<DepartmentStatisticsDTO> GetDepartmentStatisticsAsync(int id);   
     }
 }

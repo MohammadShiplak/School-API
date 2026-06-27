@@ -51,8 +51,10 @@ namespace School_Project_API.Entities
 
         public ICollection<Subject> Subjects { get; set; }=new List<Subject>(); 
 
-
-
         public ICollection<StudentClass> StudentClasses { get; set; } = new List<StudentClass>();
+
+     
+
+
     }
 }
