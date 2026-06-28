@@ -33,6 +33,7 @@ builder.Services.AddScoped<IAttendanceAlertService, AttendanceAlertService>();
 builder.Services.AddScoped<IProgressService, ProgressService>();
 builder.Services.AddScoped<IClassEnrollmentService, ClassEnrollmentService>();
 builder.Services.AddScoped<IClassSubjectService, ClassSubjectService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddSignalR();
 
 
