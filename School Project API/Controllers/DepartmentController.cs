@@ -14,7 +14,7 @@ namespace School_Project_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize (Roles ="Teacher")]
+    [Authorize (Roles ="Teacher,Admin")]
     public class DepartmentController : ControllerBase
     {
      

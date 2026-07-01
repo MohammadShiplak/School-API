@@ -10,6 +10,8 @@ using School_Project_API.Hubs;
 using School_Project_API.Data.Config;
 using School_Project_API.Entities;
 
+using SchoolManagementSystem.API.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // ── DbContext ─────────────────────────────────────────────────
@@ -25,7 +27,6 @@ builder.Services.AddScoped<ISubjectService, SubjectService>();
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IClassService, ClassService>();
 builder.Services.AddScoped<IAccessCardService, AccessCardService>();
-builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<IAttendanceService, AttendanceService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IHomeworkService, HomeworkService>();
@@ -34,7 +35,10 @@ builder.Services.AddScoped<IProgressService, ProgressService>();
 builder.Services.AddScoped<IClassEnrollmentService, ClassEnrollmentService>();
 builder.Services.AddScoped<IClassSubjectService, ClassSubjectService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
+
+builder.Services.AddHttpClient<IGeminiService, GeminiService>();
 builder.Services.AddSignalR();
+
 
 
 // ── CORS ──────────────────────────────────────────────────────

@@ -90,7 +90,7 @@ namespace School_Project_API.Services
             var dateLabel = attendance.Date?.ToString("MMM dd, yyyy") ?? "today";
 
             await _notificationService.SendToRoleAsync(
-                role: "Teacher",
+                role: "Admin",
                 message: $"📋 {studentName} marked {statusLabel} on {dateLabel}", // ← use dateLabel
                 type: attendance.Status == AttendanceStatus.Absent ? "warning" : "success"    
             );
