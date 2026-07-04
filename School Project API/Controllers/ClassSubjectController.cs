@@ -66,7 +66,7 @@ namespace School_Project_API.Controllers
         // "Assign Subject 2 to Class 1"
         // ════════════════════════════════════════════════════════════════
         [HttpPost]
-        [Authorize(Roles = "Teacher")]
+        [Authorize(Roles = "Admin")]
         // WHY Admin only?
         //   Assigning subjects to classes is a CURRICULUM DECISION.
         //   Only admins should be able to change the curriculum.
@@ -112,14 +112,15 @@ namespace School_Project_API.Controllers
         // "Remove Subject 2 from Class 1"
         // ════════════════════════════════════════════════════════════════
         [HttpDelete("{classId:int}/{subjectId:int}")]
-        [Authorize(Roles = "Teacher")]
+        [Authorize(Roles = "Admin")]
         // WHY two route parameters in the URL (not a body)?
         //   HTTP DELETE conventionally identifies the resource in the URL.
         //   The "resource" here is the assignment between ClassId and SubjectId.
         //   So the URL IS the identifier: /api/ClassSubject/1/2 = "the assignment of Subject 2 to Class 1"
         //
         //   ALTERNATIVE: DELETE /api/ClassSubject with a body { classId, subjectId }
-        //   Some APIs do this, but it's less RESTful. URLs in DELETE identify what to delete.
+      //   Some APIs do this, but it's less RESTful. URLs in DELETE identify what to delete.
+
         public async Task<IActionResult> RemoveSubjectFromClass(int classId, int subjectId)
         {
             var deleted = await _classSubjectService.RemoveSubjectFromClassAsync(classId, subjectId);

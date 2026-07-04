@@ -33,7 +33,7 @@ namespace School_Project_API.Controllers
         //   PUT = "replace an existing resource".
         //   Enrolling a student creates a NEW row in StudentClasses → POST.
         [HttpPost]
-        [Authorize(Roles = "Teacher")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<ClassEnrollmentDTO>> EnrollStudent(
             EnrollStudentDTO dto)
         {
@@ -65,7 +65,7 @@ namespace School_Project_API.Controllers
         //   The "resource" here IS the combination (studentId, classId).
         //   Putting them in the URL is RESTful and standard.
         [HttpDelete("{studentId:int}/{classId:int}")]
-        [Authorize(Roles = "Teacher")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UnenrollStudent(
             int studentId,
             int classId)

@@ -5,7 +5,7 @@
 
       public int Id { get; set; }
 
-        public int TeacherId { get; set; }  
+        public int ?TeacherId { get; set; }  
         public string Name { get; set; }
 
 
@@ -17,7 +17,7 @@
         public Department Department { get; set; }  // Navigation
 
 
-        public Teacher Teacher { get; set; }
+        public Teacher ?Teacher { get; set; }
 
         public ICollection<StudentClass> StudentClasses { get; set; }=new List<StudentClass>();
 

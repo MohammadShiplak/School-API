@@ -21,10 +21,12 @@ namespace School_Project_API.Data.Config
                 .HasMaxLength(500)
                 .HasDefaultValue("No Description");
 
+            // ClassConfiguration.cs
             builder.HasOne(t => t.Teacher)
                 .WithMany(c => c.Class)
-                .HasForeignKey(f => f.TeacherId);
-
+                .HasForeignKey(f => f.TeacherId)
+                .IsRequired(false)                       // ✅ tell EF explicitly this FK is optional
+                .OnDelete(DeleteBehavior.SetNull);
 
 
             builder.HasOne(d=>d.Department)
